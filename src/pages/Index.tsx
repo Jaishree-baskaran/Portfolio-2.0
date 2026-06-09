@@ -2,8 +2,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import profileImage from "@/assets/cool jb.jpeg";
 import { Brain, Globe, BarChart, Code2 } from "lucide-react";
-import y2kBg1 from "@/assets/chrome-bg-1.png";
-import y2kBg3 from "@/assets/chrome-bg-3.png";
 
 const skillCategories = [
   {
@@ -36,14 +34,17 @@ const Index = () => {
   return (
     <div className="relative min-h-screen w-full flex flex-col items-center pt-32 pb-32 px-4 md:px-12 overflow-hidden bg-gradient-to-br from-white via-[#f4f6f9] to-[#e8ebf2]">
       
-      {/* Decorative Floating Chrome Elements (Inverted for dark chrome effect on white bg) */}
-      <img src={y2kBg1} alt="Chrome Shape" className="absolute -top-20 -left-20 w-[400px] opacity-30 mix-blend-multiply invert rotate-45 pointer-events-none" />
-      <img src={y2kBg3} alt="Chrome Shape" className="absolute -bottom-40 -right-20 w-[600px] opacity-20 mix-blend-multiply invert -rotate-12 pointer-events-none" />
-      <img src={y2kBg1} alt="Chrome Shape" className="absolute top-40 right-20 w-[300px] opacity-20 mix-blend-multiply invert rotate-[120deg] pointer-events-none" />
+      {/* Pure CSS Chrome Decorative Elements */}
+      <div className="absolute -top-10 -left-10 w-[300px] h-[300px] rounded-full bg-gradient-to-br from-gray-200 via-gray-100 to-transparent opacity-60 blur-3xl pointer-events-none" />
+      <div className="absolute top-20 right-10 w-[200px] h-[200px] rounded-full bg-gradient-to-tr from-indigo-100 via-purple-50 to-transparent opacity-50 blur-2xl pointer-events-none" />
+      <div className="absolute bottom-40 -right-20 w-[400px] h-[400px] rounded-full bg-gradient-to-tl from-blue-100 via-gray-100 to-transparent opacity-40 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-20 left-10 w-[250px] h-[250px] rounded-full bg-gradient-to-br from-purple-100 via-indigo-50 to-transparent opacity-40 blur-2xl pointer-events-none" />
 
-      {/* Tiny Sparkles */}
-      <div className="absolute top-1/4 left-1/3 w-1.5 h-1.5 bg-gray-400 rounded-full shadow-[0_0_10px_2px_rgba(0,0,0,0.2)]" />
-      <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-gray-300 rounded-full shadow-[0_0_15px_4px_rgba(0,0,0,0.1)]" />
+      {/* Metallic Sparkle Dots */}
+      <div className="absolute top-[18%] left-[28%] w-2 h-2 bg-gradient-to-br from-white to-gray-400 rounded-full shadow-[0_0_12px_3px_rgba(100,100,180,0.15)]" />
+      <div className="absolute top-[35%] right-[22%] w-2.5 h-2.5 bg-gradient-to-br from-white to-gray-300 rounded-full shadow-[0_0_15px_4px_rgba(100,100,180,0.1)]" />
+      <div className="absolute bottom-[30%] left-[15%] w-1.5 h-1.5 bg-gradient-to-br from-white to-gray-400 rounded-full shadow-[0_0_10px_2px_rgba(100,100,180,0.15)]" />
+      <div className="absolute top-[60%] right-[35%] w-1 h-1 bg-gradient-to-br from-white to-gray-300 rounded-full shadow-[0_0_8px_2px_rgba(100,100,180,0.1)]" />
 
       <div className="relative z-10 w-full max-w-[1300px] flex flex-col md:flex-row items-center justify-between gap-12 mt-10">
         
