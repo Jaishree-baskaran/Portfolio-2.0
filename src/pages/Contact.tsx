@@ -66,7 +66,7 @@ const Contact = () => {
           {/* Resume View Section */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full">
             <a
-              href="public/resumes/JaishreeB.pdf"
+              href="/resumes/JaishreeResume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-3.5 bg-white/10 border border-white/20 text-white rounded-full hover:bg-white/20 transition-colors duration-300 text-xs tracking-widest font-bold uppercase"
@@ -75,7 +75,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="public/resumes/single page portfolio.png"
+              href="/resumes/Jays_design_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-3.5 bg-white/10 border border-white/20 text-white rounded-full hover:bg-white/20 transition-colors duration-300 text-xs tracking-widest font-bold uppercase"
