@@ -48,15 +48,11 @@ const About = () => {
              <div className="w-20 h-1 bg-gradient-to-r from-white to-gray-500 rounded-full" />
 
              <p className="text-white/80 text-lg md:text-xl leading-relaxed max-w-2xl font-light">
-               I’m Jaishree, I love crafting intelligent systems and
-               meaningful digital experiences that sit at the crossroads of
-               logic and creativity.
+               Jaishree Baskaran is an AI/ML Analyst and Software Engineer specializing in the design and development of intelligent computational systems. Sitting at the intersection of robust logic and technical innovation, she is dedicated to building scalable architectures that translate complex datasets into actionable intelligence.
                <br /><br />
-               I’m intentional about how I present myself because presence matters. The way I think, speak, and build reflects the standards I hold for myself. 
-               I don’t dilute my ideas or shrink my voice... I articulate them with clarity and confidence.
+               With a rigorous approach to system development and technical analysis, she prioritizes clarity, structural integrity, and composure in execution. She focuses on questioning assumptions, engineering with purpose, and delivering high-impact solutions.
                <br /><br />
-               I’m bold in my thinking and composed in my delivery. I speak with conviction, question assumptions, and move forward with certainty. I believe in depth over distraction and impact over impression. 
-               If I build something, it carries intention. If I lead, it carries responsibility.
+               Her work is driven by a commitment to depth and operational excellence, ensuring that every project she leads or contributes to carries precise intent and responsible execution.
              </p>
            </motion.div>
 

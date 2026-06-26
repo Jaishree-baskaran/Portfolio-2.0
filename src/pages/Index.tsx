@@ -114,7 +114,7 @@ const Index = () => {
               <img 
                 src={profileImage} 
                 alt="Jaishree Baskaran" 
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-center scale-[1.4] transition-transform duration-500 hover:scale-[1.5]"
               />
             </div>
 

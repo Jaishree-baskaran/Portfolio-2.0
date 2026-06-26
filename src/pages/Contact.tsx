@@ -34,8 +34,8 @@ const Contact = () => {
             </span>
           </h1>
 
-          <p className="text-white/60 mb-12 leading-relaxed max-w-lg font-light">
-            Whether you want to discuss the future of AI, collaborate on a groundbreaking project, my inbox is always open. Let's make something amazing.
+          <p className="text-white/70 mb-12 leading-relaxed max-w-xl font-light text-sm md:text-base">
+            Whether you are looking to collaborate on research, discuss enterprise AI/ML solutions, or explore professional opportunities, my inbox is always open. Let's connect and build something impactful.
           </p>
 
           {/* Fun Interactive Grid (Reduced to 2 buttons) */}
