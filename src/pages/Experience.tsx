@@ -18,24 +18,24 @@ const Experience = () => {
   return (
     <div className="relative min-h-screen w-full flex flex-col items-center pt-40 pb-20 px-4 md:px-12 overflow-x-hidden bg-transparent">
       
-      {/* Background glow orbs for the Experience page */}
-      <div className="absolute top-[30%] right-[-10%] w-[350px] h-[350px] rounded-full bg-purple-600/5 blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-[20%] left-[-10%] w-[400px] h-[400px] rounded-full bg-indigo-600/5 blur-[120px] pointer-events-none" />
+      {/* Background shading for the Experience page */}
+      <div className="absolute top-[30%] right-[-10%] w-[350px] h-[350px] rounded-full bg-[#EFEAE2]/20 blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-[20%] left-[-10%] w-[400px] h-[400px] rounded-full bg-[#FAF7F2] blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 w-full max-w-[1400px] flex flex-col gap-8">
 
         {/* Title Pill (Reduced Size) */}
-        <div className="bg-white/[0.02] border border-white/5 px-8 py-5 flex items-center justify-center relative overflow-hidden rounded-[2rem] shadow-2xl backdrop-blur-md">
-          <h1 className="text-2xl md:text-3xl font-extrabold tracking-[0.2em] relative z-10 text-center uppercase text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-400">
+        <div className="bg-[#FCFAF7] border border-[#E5DFD3] px-8 py-5 flex items-center justify-center relative overflow-hidden rounded-[2rem] shadow-sm backdrop-blur-md">
+          <h1 className="text-2xl md:text-3xl font-extrabold tracking-[0.2em] relative z-10 text-center uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#1C1917] to-zinc-600 font-serif">
             Professional Journey
           </h1>
         </div>
 
         {/* Professional Jobs Section */}
-        <div className="bg-white/[0.02] border border-white/5 p-6 md:p-12 relative overflow-hidden rounded-[2.5rem] shadow-2xl backdrop-blur-md">
+        <div className="bg-[#FCFAF7] border border-[#E5DFD3] p-6 md:p-12 relative overflow-hidden rounded-[2.5rem] shadow-sm backdrop-blur-md font-sans">
            <div className="flex items-center gap-4 mb-10">
-             <div className="w-10 h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">1.</div>
-             <h2 className="bg-purple-500/10 border border-purple-500/20 text-purple-300 px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest">
+             <div className="w-10 h-10 bg-[#6e1227] text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">1.</div>
+             <h2 className="bg-[#6e1227]/5 border border-[#6e1227]/20 text-[#6e1227] px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest">
                Work History
              </h2>
            </div>
@@ -53,24 +53,24 @@ const Experience = () => {
                    viewport={{ once: true }}
                    transition={{ duration: 0.5, delay: index * 0.05 }}
                    whileHover={{ scale: 0.98 }}
-                   className={`relative bg-white/[0.01] border border-white/5 rounded-[2rem] p-8 overflow-hidden group cursor-pointer shadow-xl backdrop-blur-md flex flex-col justify-between hover:border-purple-500/20 hover:shadow-[0_0_30px_rgba(168,85,247,0.1)] transition-all duration-300 ${spanClasses}`}
+                   className={`relative bg-white border border-[#E5DFD3]/60 rounded-[2rem] p-8 overflow-hidden group cursor-pointer shadow-sm hover:border-[#6e1227]/20 hover:shadow-md transition-all duration-300 ${spanClasses}`}
                  >
-                   <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                   <div className="absolute inset-0 bg-gradient-to-tr from-[#6e1227]/5 via-transparent to-[#6e1227]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                    
                    <div className="relative z-10 flex justify-between items-start">
-                     <span className="px-4 py-1.5 rounded-full border border-purple-500/20 bg-purple-500/5 text-[9px] font-bold tracking-widest uppercase text-purple-300">
+                     <span className="px-4 py-1.5 rounded-full border border-[#6e1227]/20 bg-[#6e1227]/5 text-[9px] font-bold tracking-widest uppercase text-[#6e1227]">
                        {exp.type}
                      </span>
-                     <span className="text-zinc-500 font-bold tracking-widest text-xs uppercase">
+                     <span className="text-zinc-400 font-bold tracking-widest text-xs uppercase">
                        {exp.time}
                      </span>
                    </div>
 
                    <div className="relative z-10 mt-auto">
-                     <h3 className={`font-extrabold tracking-tight text-white mb-2 leading-tight ${index === 0 ? 'text-3xl md:text-4xl' : 'text-xl'}`}>
+                     <h3 className={`font-bold tracking-tight text-[#1C1917] mb-2 leading-tight font-serif ${index === 0 ? 'text-3xl md:text-4xl' : 'text-xl'}`}>
                        {exp.company}
                      </h3>
-                     <p className={`text-zinc-400 font-semibold uppercase tracking-wider ${index === 0 ? 'text-xs md:text-sm' : 'text-[10px]'}`}>
+                     <p className={`text-zinc-500 font-semibold uppercase tracking-wider ${index === 0 ? 'text-xs md:text-sm' : 'text-[10px]'}`}>
                        {exp.role}
                      </p>
                    </div>
@@ -81,10 +81,10 @@ const Experience = () => {
         </div>
 
         {/* Leadership Section */}
-        <div className="bg-white/[0.02] border border-white/5 p-6 md:p-12 relative overflow-hidden rounded-[2.5rem] shadow-2xl backdrop-blur-md">
+        <div className="bg-[#FCFAF7] border border-[#E5DFD3] p-6 md:p-12 relative overflow-hidden rounded-[2.5rem] shadow-sm backdrop-blur-md font-sans">
            <div className="flex items-center gap-4 mb-10">
-             <div className="w-10 h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">2.</div>
-             <h2 className="bg-purple-500/10 border border-purple-500/20 text-purple-300 px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest">
+             <div className="w-10 h-10 bg-[#6e1227] text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">2.</div>
+             <h2 className="bg-[#6e1227]/5 border border-[#6e1227]/20 text-[#6e1227] px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest">
                Leadership & Impact
              </h2>
            </div>
@@ -102,24 +102,24 @@ const Experience = () => {
                    viewport={{ once: true }}
                    transition={{ duration: 0.5, delay: index * 0.1 }}
                    whileHover={{ y: -5 }}
-                   className={`relative bg-white/[0.01] border border-white/5 rounded-[2rem] p-8 overflow-hidden group cursor-pointer shadow-xl backdrop-blur-md flex flex-col justify-between hover:border-purple-500/20 hover:shadow-[0_0_30px_rgba(168,85,247,0.1)] transition-all duration-300 ${spanClasses}`}
+                   className={`relative bg-white border border-[#E5DFD3]/60 rounded-[2rem] p-8 overflow-hidden group cursor-pointer shadow-sm hover:border-[#6e1227]/20 hover:shadow-md transition-all duration-300 ${spanClasses}`}
                  >
-                   <div className="absolute inset-0 bg-gradient-to-bl from-purple-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                   <div className="absolute inset-0 bg-gradient-to-bl from-[#6e1227]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                    
                    <div className="relative z-10 flex justify-between items-start">
-                     <span className="px-4 py-1.5 rounded-full border border-purple-500/20 bg-purple-500/5 text-[9px] font-bold tracking-widest uppercase text-purple-300">
+                     <span className="px-4 py-1.5 rounded-full border border-[#6e1227]/20 bg-[#6e1227]/5 text-[9px] font-bold tracking-widest uppercase text-[#6e1227]">
                        {exp.type}
                      </span>
-                     <span className="text-zinc-500 font-bold tracking-widest text-xs uppercase">
+                     <span className="text-zinc-400 font-bold tracking-widest text-xs uppercase">
                        {exp.time}
                      </span>
                    </div>
 
                    <div className="relative z-10 mt-auto">
-                     <h3 className="text-xl font-bold tracking-tight text-white mb-2 leading-tight">
+                     <h3 className="text-xl font-bold tracking-tight text-[#1C1917] mb-2 leading-tight font-serif">
                        {exp.company}
                      </h3>
-                     <p className="text-zinc-400 font-semibold uppercase tracking-wider text-[10px]">
+                     <p className="text-zinc-500 font-semibold uppercase tracking-wider text-[10px]">
                        {exp.role}
                      </p>
                    </div>
