@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import customLogo from "@/assets/jb-logo-custom.png";
 
 const navItems = [
   { path: "/about", label: "ABOUT" },
@@ -17,24 +16,32 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   
   const isHome = location.pathname === "/";
 
-  // Light aesthetic for home, dark for everything else
-  const layoutBg = isHome ? "min-h-screen bg-[#f8f9fc] text-gray-900" : "noise-bg min-h-screen bg-black text-white";
-  const navContainer = isHome 
-    ? "w-full max-w-[1400px] px-4 md:px-12 flex items-center justify-between py-6 relative z-50" 
-    : "glass-pill bg-[#0a0a0a] text-white flex items-center justify-between px-6 py-4 md:px-10 md:py-5 shadow-2xl";
+  // Unified dark aesthetic across all pages matching the reference design
+  const layoutBg = "noise-bg min-h-screen bg-[#050505] text-white font-sans relative overflow-x-hidden";
+  const navContainer = "glass-pill bg-black/40 backdrop-blur-xl border border-white/5 text-white flex items-center justify-between px-6 py-4 md:px-10 md:py-4.5 shadow-2xl relative z-50";
 
   return (
     <div className={layoutBg}>
-      <div className={`absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1400px] px-4 md:px-12 z-50 ${isHome ? "top-4" : "top-6"}`}>
+      {/* Cosmic Nebula Backdrops (Nebula Purple glow effect from Reference Photo) */}
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-purple-600/10 blur-[120px] pointer-events-none z-0" />
+      <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-violet-600/5 blur-[150px] pointer-events-none z-0" />
+
+      {/* Thin Vertical Dividers / Alignment Grid Lines (from Reference Photo) */}
+      <div className="absolute inset-y-0 left-0 right-0 z-0 pointer-events-none flex justify-between max-w-[1400px] mx-auto px-4 md:px-12 opacity-30">
+        <div className="w-px h-full border-l border-dashed border-white/10" />
+        <div className="w-px h-full border-l border-dashed border-white/10 hidden md:block" />
+        <div className="w-px h-full border-l border-dashed border-white/10 hidden md:block" />
+        <div className="w-px h-full border-l border-dashed border-white/10" />
+      </div>
+
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1400px] px-4 md:px-12 z-50 top-6">
         <nav className={navContainer}>
-          {/* Custom Y2K Logo & Option A Pill */}
+          {/* Typographic Monogram Logo (Formal yet high-end aesthetic) */}
           <div className="flex items-center gap-6">
-            <Link to="/" className="flex items-center">
-              <img 
-                src={customLogo} 
-                alt="JB" 
-                className={`w-auto object-contain transition-transform duration-300 origin-left ${isHome ? "h-16 md:h-24 hover:scale-110 drop-shadow-[0_10px_20px_rgba(0,0,0,0.1)]" : "h-14 md:h-20 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:scale-110"}`}
-              />
+            <Link to="/" className="flex items-center group">
+              <span className="text-xl md:text-2xl font-black tracking-[0.15em] text-white transition-all duration-300 group-hover:scale-105 select-none font-sans uppercase">
+                JAISHREE<span className="text-purple-500">.</span>
+              </span>
             </Link>
           </div>
 
@@ -47,12 +54,16 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`relative text-xs md:text-sm font-bold tracking-widest transition-colors duration-300 group
-                   ${isHome 
-                      ? (isActive ? "text-black" : "text-gray-500 hover:text-black") 
-                      : (isActive ? "text-white" : "text-white/60 hover:text-white")}`}
+                  className={`relative text-xs font-semibold tracking-[0.2em] transition-colors duration-300 group
+                    ${isActive ? "text-white" : "text-white/40 hover:text-white"}`}
                 >
                   {item.label}
+                  {isActive && (
+                    <motion.span 
+                      layoutId="activeNavIndicator"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full" 
+                    />
+                  )}
                 </Link>
               );
             })}
@@ -60,12 +71,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
           {/* Mobile Button */}
           <button
-            className="md:hidden flex flex-col gap-1.5"
+            className="md:hidden flex flex-col gap-1.5 z-50"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            <span className={`block w-6 h-[2px] ${isHome ? "bg-black" : "bg-white"}`} />
-            <span className={`block w-6 h-[2px] ${isHome ? "bg-black" : "bg-white"}`} />
-            <span className={`block w-6 h-[2px] ${isHome ? "bg-black" : "bg-white"}`} />
+            <span className={`block w-6 h-[2px] bg-white transition-transform ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+            <span className={`block w-6 h-[2px] bg-white transition-opacity ${menuOpen ? "opacity-0" : ""}`} />
+            <span className={`block w-6 h-[2px] bg-white transition-transform ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
           </button>
         </nav>
       </div>
@@ -77,7 +88,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className={`fixed inset-0 z-40 backdrop-blur-xl flex flex-col items-center justify-center gap-8 ${isHome ? "bg-white/95" : "bg-black/95"}`}
+            className="fixed inset-0 z-40 backdrop-blur-2xl flex flex-col items-center justify-center gap-8 bg-black/95"
           >
             {navItems.map((item) => {
               const isActive = location.pathname === item.path;
@@ -87,12 +98,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   key={item.path}
                   to={item.path}
                   onClick={() => setMenuOpen(false)}
-                  className={`relative text-3xl uppercase tracking-wider transition-colors 
-                              ${isHome ? (isActive ? "text-black" : "text-gray-500") : (isActive ? "text-white" : "text-white/60")}`}
+                  className={`relative text-2xl uppercase tracking-[0.3em] font-semibold transition-colors 
+                              ${isActive ? "text-white" : "text-white/50"}`}
                 >
                   {item.label}
                   {isActive && (
-                    <span className="absolute -bottom-2 left-0 right-0 h-1 bg-red-500 rounded-full" />
+                    <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-purple-500 rounded-full" />
                   )}
                 </Link>
               );

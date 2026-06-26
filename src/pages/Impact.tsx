@@ -88,45 +88,48 @@ const dataScienceCerts = [
 
 const Impact = () => {
   return (
-    <div className="relative min-h-screen w-full flex flex-col items-center pt-32 pb-20 px-4 md:px-12 overflow-x-hidden">
+    <div className="relative min-h-screen w-full flex flex-col items-center pt-40 pb-20 px-4 md:px-12 overflow-x-hidden bg-transparent">
       
-      {/* Y2K Chrome Background Elements */}
-      <div className="fixed inset-0 z-0 bg-black pointer-events-none overflow-hidden">
-        <img src={y2kBg} alt="Y2K Chrome Background" className="absolute inset-0 w-full h-full object-cover mix-blend-screen opacity-[0.35] -scale-y-100" />
-        <div className="absolute inset-0 opacity-[0.05] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
-      </div>
+      {/* Background glow orbs for the Impact page */}
+      <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] rounded-full bg-purple-600/5 blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-[20%] left-[-10%] w-[450px] h-[450px] rounded-full bg-indigo-600/5 blur-[120px] pointer-events-none" />
 
-      <div className="relative z-10 w-full max-w-[1200px] flex flex-col gap-20 mt-10">
+      <div className="relative z-10 w-full max-w-[1200px] flex flex-col gap-24 mt-10">
 
         {/* ================= PUBLICATIONS ================= */}
         <section className="w-full">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 tracking-wide">
-            Publications
-          </h2>
+          <div className="text-center mb-16">
+            <span className="text-xs font-semibold text-purple-400 tracking-[0.3em] uppercase block mb-3">
+              // Scientific Contributions
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-[0.2em] text-white">
+              Publications
+            </h2>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {publications.map((pub, index) => (
               <motion.div
                 key={index}
                 whileHover={{ y: -5 }}
-                className="bg-[#111111] rounded-2xl overflow-hidden shadow-2xl flex flex-col"
+                className="bg-[#0d0d11]/90 border border-white/5 rounded-3xl overflow-hidden shadow-2xl flex flex-col backdrop-blur-xl hover:border-purple-500/20 transition-all duration-300"
               >
-                <div className="w-full h-56 overflow-hidden bg-[#1a1a1a]">
+                <div className="w-full h-56 overflow-hidden bg-zinc-950">
                   <img 
                     src={pub.image} 
                     alt={pub.title} 
-                    className="w-full h-full object-cover" 
+                    className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500" 
                   />
                 </div>
                 
                 <div className="p-6 flex flex-col">
-                  <div className="text-red-400 text-xs font-semibold tracking-wider mb-3">
+                  <div className="text-purple-400 text-xs font-semibold tracking-wider mb-3 uppercase">
                     {pub.date}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 leading-snug">
                     {pub.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-zinc-400 text-sm leading-relaxed font-light">
                     {pub.description}
                   </p>
                 </div>
@@ -137,22 +140,27 @@ const Impact = () => {
 
         {/* ================= ACHIEVEMENTS ================= */}
         <section className="w-full">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 tracking-wide">
-            Achievements
-          </h2>
+          <div className="text-center mb-16">
+            <span className="text-xs font-semibold text-purple-400 tracking-[0.3em] uppercase block mb-3">
+              // Highlights & Awards
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-[0.2em] text-white">
+              Achievements
+            </h2>
+          </div>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {achievements.map((ach, index) => (
               <motion.div
                 key={index}
                 whileHover={{ y: -5 }}
-                className="bg-[#111111] rounded-2xl overflow-hidden shadow-2xl flex flex-col"
+                className="bg-[#0d0d11]/90 border border-white/5 rounded-3xl overflow-hidden shadow-2xl flex flex-col backdrop-blur-xl hover:border-purple-500/20 transition-all duration-300"
               >
-                <div className="w-full h-48 overflow-hidden bg-[#1a1a1a]">
+                <div className="w-full h-48 overflow-hidden bg-zinc-950">
                   <img 
                     src={ach.image} 
                     alt={ach.title} 
-                    className="w-full h-full object-cover" 
+                    className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500" 
                   />
                 </div>
                 
@@ -160,7 +168,7 @@ const Impact = () => {
                   <h3 className="text-lg font-bold text-white mb-2 leading-snug">
                     {ach.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-zinc-400 text-sm leading-relaxed font-light">
                     {ach.description}
                   </p>
                 </div>
@@ -171,18 +179,23 @@ const Impact = () => {
 
         {/* ================= CERTIFICATIONS ================= */}
         <section className="w-full mt-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 tracking-wide">
-            Certifications
-          </h2>
+          <div className="text-center mb-16">
+            <span className="text-xs font-semibold text-purple-400 tracking-[0.3em] uppercase block mb-3">
+              // Professional Credentials
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-[0.2em] text-white">
+              Certifications
+            </h2>
+          </div>
 
           <div className="flex flex-col gap-12 max-w-5xl mx-auto">
              {/* Technical */}
              <div>
-               <h3 className="text-white/40 font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-white/10 pb-4 text-center md:text-left">Technical</h3>
+               <h3 className="text-purple-400/50 font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-white/5 pb-4 text-center md:text-left">Technical</h3>
                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                   {technicalCerts.map((cert, i) => (
-                     <div key={i} className="bg-[#111111] border border-white/5 p-5 rounded-2xl flex items-center justify-center text-center shadow-lg">
-                        <span className="font-serif italic text-gray-300 text-sm md:text-[15px] font-light tracking-wide">{cert}</span>
+                     <div key={i} className="bg-white/[0.01] border border-white/5 p-5 rounded-2xl flex items-center justify-center text-center shadow-lg hover:bg-white/[0.03] transition-colors">
+                        <span className="font-sans text-zinc-300 text-xs md:text-sm font-light tracking-wide">{cert}</span>
                      </div>
                   ))}
                </div>
@@ -190,11 +203,11 @@ const Impact = () => {
 
              {/* Space Science */}
              <div>
-               <h3 className="text-white/40 font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-white/10 pb-4 text-center md:text-left">Space Science</h3>
+               <h3 className="text-purple-400/50 font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-white/5 pb-4 text-center md:text-left">Space Science</h3>
                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {spaceScienceCerts.map((cert, i) => (
-                     <div key={i} className="bg-[#111111] border border-white/5 p-5 rounded-2xl flex items-center justify-center text-center shadow-lg">
-                        <span className="font-serif italic text-gray-300 text-sm md:text-[15px] font-light tracking-wide">{cert}</span>
+                     <div key={i} className="bg-white/[0.01] border border-white/5 p-5 rounded-2xl flex items-center justify-center text-center shadow-lg hover:bg-white/[0.03] transition-colors">
+                        <span className="font-sans text-zinc-300 text-xs md:text-sm font-light tracking-wide">{cert}</span>
                      </div>
                   ))}
                </div>
@@ -202,11 +215,11 @@ const Impact = () => {
 
              {/* Data Science */}
              <div>
-               <h3 className="text-white/40 font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-white/10 pb-4 text-center md:text-left">Data Science</h3>
+               <h3 className="text-purple-400/50 font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-white/5 pb-4 text-center md:text-left">Data Science</h3>
                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                   {dataScienceCerts.map((cert, i) => (
-                     <div key={i} className="bg-[#111111] border border-white/5 p-5 rounded-2xl flex items-center justify-center text-center shadow-lg">
-                        <span className="font-serif italic text-gray-300 text-sm md:text-[15px] font-light tracking-wide">{cert}</span>
+                     <div key={i} className="bg-white/[0.01] border border-white/5 p-5 rounded-2xl flex items-center justify-center text-center shadow-lg hover:bg-white/[0.03] transition-colors">
+                        <span className="font-sans text-zinc-300 text-xs md:text-sm font-light tracking-wide">{cert}</span>
                      </div>
                   ))}
                </div>

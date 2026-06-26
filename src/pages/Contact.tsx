@@ -1,16 +1,13 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Send, Coffee } from "lucide-react";
-import y2kBg from "@/assets/chrome-bg-3.png";
+import { Github, Linkedin } from "lucide-react";
 
 const Contact = () => {
   return (
-    <div className="relative min-h-screen w-full flex flex-col items-center justify-center pt-40 pb-20 px-4 md:px-12 overflow-x-hidden">
+    <div className="relative min-h-screen w-full flex flex-col items-center justify-center pt-40 pb-20 px-4 md:px-12 overflow-x-hidden bg-transparent">
       
-      {/* Y2K Tribal Chrome Background Elements */}
-      <div className="fixed inset-0 z-0 bg-[#ebebeb] pointer-events-none overflow-hidden">
-        <img src={y2kBg} alt="Y2K Chrome Background" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-[0.85] -scale-x-100 -scale-y-100" />
-        <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
-      </div>
+      {/* Background glow orbs for the Contact page */}
+      <div className="absolute top-[20%] left-[-10%] w-[350px] h-[350px] rounded-full bg-purple-600/5 blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-[20%] right-[-10%] w-[400px] h-[400px] rounded-full bg-indigo-600/5 blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 w-full max-w-[1000px] flex flex-col gap-6">
 
@@ -19,22 +16,22 @@ const Contact = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="glass-pill bg-[#0a0a0a] text-white p-10 md:p-16 relative overflow-hidden flex flex-col items-center text-center shadow-2xl"
+          className="bg-white/[0.02] border border-white/5 text-white p-10 md:p-16 relative overflow-hidden flex flex-col items-center text-center shadow-2xl rounded-[2.5rem] backdrop-blur-md"
         >
-          <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-white/5 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-white/[0.01] via-transparent to-transparent pointer-events-none" />
 
-          <p className="text-xs uppercase tracking-[0.4em] text-white/50 mb-6 font-bold">
+          <p className="text-xs uppercase tracking-[0.4em] text-purple-400 mb-6 font-semibold">
             Connect
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-none">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-8 leading-none uppercase">
             Let's Build Something <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-400 to-indigo-400">
               Intelligent
             </span>
           </h1>
 
-          <p className="text-white/70 mb-12 leading-relaxed max-w-xl font-light text-sm md:text-base">
+          <p className="text-zinc-400 mb-12 leading-relaxed max-w-xl font-light text-sm md:text-base">
             Whether you are looking to collaborate on research, discuss enterprise AI/ML solutions, or explore professional opportunities, my inbox is always open. Let's connect and build something impactful.
           </p>
 
@@ -45,20 +42,20 @@ const Contact = () => {
               href="https://www.linkedin.com/in/jaishree-b-ab7718235"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col items-center justify-center gap-4 hover:bg-white hover:text-black transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,255,255,0.2)]"
+              className="group bg-white/[0.01] border border-white/5 rounded-3xl p-8 flex flex-col items-center justify-center gap-4 hover:border-purple-500/20 hover:bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_35px_rgba(168,85,247,0.1)]"
             >
-              <Linkedin className="w-8 h-8 text-white/70 group-hover:text-black transition-colors" />
-              <span className="font-bold tracking-widest text-xs uppercase">LinkedIn</span>
+              <Linkedin className="w-8 h-8 text-zinc-400 group-hover:text-purple-400 transition-colors" />
+              <span className="font-semibold tracking-[0.2em] text-xs uppercase text-zinc-300 group-hover:text-white">LinkedIn</span>
             </a>
 
             <a
               href="https://github.com/Jaishree-baskaran"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col items-center justify-center gap-4 hover:bg-white hover:text-black transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,255,255,0.2)]"
+              className="group bg-white/[0.01] border border-white/5 rounded-3xl p-8 flex flex-col items-center justify-center gap-4 hover:border-purple-500/20 hover:bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_35px_rgba(168,85,247,0.1)]"
             >
-              <Github className="w-8 h-8 text-white/70 group-hover:text-black transition-colors" />
-              <span className="font-bold tracking-widest text-xs uppercase">GitHub</span>
+              <Github className="w-8 h-8 text-zinc-400 group-hover:text-purple-400 transition-colors" />
+              <span className="font-semibold tracking-[0.2em] text-xs uppercase text-zinc-300 group-hover:text-white">GitHub</span>
             </a>
 
           </div>
@@ -69,7 +66,7 @@ const Contact = () => {
               href="/resumes/JaishreeResume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-3.5 bg-white/10 border border-white/20 text-white rounded-full hover:bg-white/20 transition-colors duration-300 text-xs tracking-widest font-bold uppercase"
+              className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-3.5 bg-purple-600 border border-purple-500/20 text-white rounded-full hover:bg-purple-700 transition-all duration-300 text-xs tracking-widest font-bold uppercase shadow-[0_4px_25px_rgba(168,85,247,0.3)] hover:-translate-y-0.5"
             >
               Tech Resume
             </a>
@@ -78,15 +75,15 @@ const Contact = () => {
               href="/resumes/Jays_design_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-3.5 bg-white/10 border border-white/20 text-white rounded-full hover:bg-white/20 transition-colors duration-300 text-xs tracking-widest font-bold uppercase"
+              className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-3.5 bg-transparent border border-zinc-800 text-zinc-300 rounded-full hover:border-white hover:text-white transition-all duration-300 text-xs tracking-widest font-bold uppercase hover:-translate-y-0.5"
             >
               Design Resume
             </a>
           </div>
 
-          <div className="mt-16 w-12 h-1 bg-white/20 rounded-full mx-auto" />
+          <div className="mt-16 w-12 h-0.5 bg-white/10 rounded-full mx-auto" />
 
-          <p className="mt-8 text-xs text-white/40 font-bold tracking-widest uppercase">
+          <p className="mt-8 text-[10px] text-zinc-600 font-bold tracking-[0.2em] uppercase">
             © 2026 Jaishree Baskaran.
           </p>
         </motion.div>
