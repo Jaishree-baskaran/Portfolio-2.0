@@ -42,9 +42,6 @@ const Index = () => {
         <div className="relative z-10 w-full max-w-[1250px] flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left Hero Content */}
           <div className="flex-1 flex flex-col items-start gap-4">
-            <div className="bg-black text-white px-3.5 py-1 text-[10px] font-black tracking-[0.25em] uppercase rounded skew-x-[-12deg]">
-              <span className="block skew-x-[12deg]">// ENGINE RUNNING</span>
-            </div>
 
             <h1 className="font-archivo font-black italic tracking-tighter text-white uppercase text-[3rem] sm:text-[4.5rem] md:text-[5.5rem] lg:text-[6.5rem] leading-[0.9] skew-x-[-6deg]">
               WELCOME TO <br/>THE ARENA

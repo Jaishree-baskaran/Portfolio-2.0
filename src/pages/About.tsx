@@ -39,9 +39,6 @@ const About = () => {
              transition={{ duration: 0.5 }}
              className="flex-1 space-y-8 relative z-10 font-sans"
            >
-             <div className="text-xs font-bold text-[#E30613] tracking-[0.25em] uppercase font-sans">
-               // Biography
-             </div>
              
              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#1C1917] font-archivo">
                ABOUT ME

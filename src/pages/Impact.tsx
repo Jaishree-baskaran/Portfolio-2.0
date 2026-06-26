@@ -99,9 +99,6 @@ const Impact = () => {
         {/* ================= PUBLICATIONS ================= */}
         <section className="w-full">
           <div className="text-center mb-16">
-            <span className="text-xs font-semibold text-[#E30613] tracking-[0.3em] uppercase block mb-3 font-sans">
-              // Scientific Contributions
-            </span>
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-[0.2em] text-[#1C1917] font-archivo">
               Publications
             </h2>
@@ -141,9 +138,6 @@ const Impact = () => {
         {/* ================= ACHIEVEMENTS ================= */}
         <section className="w-full">
           <div className="text-center mb-16">
-            <span className="text-xs font-semibold text-[#E30613] tracking-[0.3em] uppercase block mb-3 font-sans">
-              // Highlights & Awards
-            </span>
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-[0.2em] text-[#1C1917] font-archivo">
               Achievements
             </h2>
@@ -180,9 +174,6 @@ const Impact = () => {
         {/* ================= CERTIFICATIONS ================= */}
         <section className="w-full mt-4">
           <div className="text-center mb-16">
-            <span className="text-xs font-semibold text-[#E30613] tracking-[0.3em] uppercase block mb-3 font-sans">
-              // Professional Credentials
-            </span>
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-[0.2em] text-[#1C1917] font-archivo">
               Certifications
             </h2>
