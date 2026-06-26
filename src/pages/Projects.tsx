@@ -169,7 +169,7 @@ const Projects = () => {
                         <img
                           src={project.image}
                           alt={project.title}
-                          className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
+                          className="w-full h-full object-cover transition-all duration-700"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
                       </div>

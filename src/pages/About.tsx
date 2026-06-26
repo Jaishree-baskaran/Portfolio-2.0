@@ -39,15 +39,15 @@ const About = () => {
              transition={{ duration: 0.5 }}
              className="flex-1 space-y-8 relative z-10 font-sans"
            >
-             <div className="text-xs font-bold text-[#6e1227] tracking-[0.25em] uppercase font-sans">
+             <div className="text-xs font-bold text-[#E30613] tracking-[0.25em] uppercase font-sans">
                // Biography
              </div>
              
-             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#1C1917] font-serif">
+             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#1C1917] font-archivo">
                ABOUT ME
              </h1>
 
-             <div className="w-20 h-0.5 bg-[#6e1227] rounded-full" />
+             <div className="w-20 h-0.5 bg-[#E30613] rounded-full" />
 
              <p className="text-zinc-600 text-base md:text-lg leading-relaxed max-w-2xl font-light">
                Jaishree Baskaran is an AI/ML Analyst and Software Engineer specializing in the design and development of intelligent computational systems. Sitting at the intersection of robust logic and technical innovation, she is dedicated to building scalable architectures that translate complex datasets into actionable intelligence.
@@ -70,7 +70,7 @@ const About = () => {
                  <img
                    src={aboutImage}
                    alt="Jaishree"
-                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105 opacity-90 hover:opacity-100"
+                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                  />
                  <div className="absolute inset-0 bg-gradient-to-tr from-[#EFEAE2]/20 to-transparent pointer-events-none mix-blend-overlay" />
                </div>
@@ -82,19 +82,19 @@ const About = () => {
         {/* Core Domains of Focus - Portfolio POV Addition */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 font-sans">
           <div className="bg-[#FCFAF7] border border-[#E5DFD3] p-8 rounded-[2rem] shadow-sm">
-            <h3 className="text-lg font-bold text-[#6e1227] mb-3 font-serif">01 / Machine Learning</h3>
+            <h3 className="text-lg font-bold text-[#E30613] mb-3 font-archivo">01 / Machine Learning</h3>
             <p className="text-zinc-600 text-sm font-light leading-relaxed">
               Designing advanced prediction models, supervised/unsupervised classifiers, and neural networks to extract structural meaning from high-dimensional datasets.
             </p>
           </div>
           <div className="bg-[#FCFAF7] border border-[#E5DFD3] p-8 rounded-[2rem] shadow-sm">
-            <h3 className="text-lg font-bold text-[#6e1227] mb-3 font-serif">02 / Language Processing</h3>
+            <h3 className="text-lg font-bold text-[#E30613] mb-3 font-archivo">02 / Language Processing</h3>
             <p className="text-zinc-600 text-sm font-light leading-relaxed">
               Leveraging transformers, large language models (LLMs), and RAG configurations to build highly responsive, context-aware semantic tools.
             </p>
           </div>
           <div className="bg-[#FCFAF7] border border-[#E5DFD3] p-8 rounded-[2rem] shadow-sm">
-            <h3 className="text-lg font-bold text-[#6e1227] mb-3 font-serif">03 / Software Architecture</h3>
+            <h3 className="text-lg font-bold text-[#E30613] mb-3 font-archivo">03 / Software Architecture</h3>
             <p className="text-zinc-600 text-sm font-light leading-relaxed">
               Constructing optimized database architectures and robust API endpoints with structured coding standards to scale algorithms efficiently.
             </p>
@@ -104,7 +104,7 @@ const About = () => {
         {/* Education Section */}
         <div className="bg-[#FCFAF7] border border-[#E5DFD3] p-8 md:p-12 relative overflow-hidden rounded-[2.5rem] shadow-sm font-sans">
           <div className="flex items-center gap-4 mb-12">
-             <h2 className="bg-[#6e1227]/5 border border-[#6e1227]/25 text-[#6e1227] px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest">
+             <h2 className="bg-[#E30613]/5 border border-[#E30613]/25 text-[#E30613] px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest">
                Academic Background
              </h2>
           </div>
@@ -116,17 +116,17 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-white border border-[#E5DFD3]/60 p-8 rounded-[2rem] hover:border-[#6e1227]/25 hover:shadow-sm transition-all duration-300"
+                className="bg-white border border-[#E5DFD3]/60 p-8 rounded-[2rem] hover:border-[#E30613]/25 hover:shadow-sm transition-all duration-300"
               >
                 <div className="flex justify-between items-start mb-6">
-                  <div className="px-4 py-1.5 rounded-full bg-[#6e1227]/5 border border-[#6e1227]/20 text-[10px] font-bold tracking-widest uppercase text-[#6e1227]">
+                  <div className="px-4 py-1.5 rounded-full bg-[#E30613]/5 border border-[#E30613]/20 text-[10px] font-bold tracking-widest uppercase text-[#E30613]">
                     {edu.batch}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-[#1C1917] font-serif">
+                <h3 className="text-xl font-bold mb-2 text-[#1C1917] font-archivo">
                   {edu.institution}
                 </h3>
-                <h4 className="text-xs font-semibold uppercase tracking-widest text-[#6e1227]/80 mb-6">
+                <h4 className="text-xs font-semibold uppercase tracking-widest text-[#E30613]/80 mb-6">
                   {edu.degree}
                 </h4>
                 <p className="text-zinc-600 text-sm leading-relaxed font-light font-sans">

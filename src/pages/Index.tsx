@@ -76,7 +76,7 @@ const Index = () => {
                 <img 
                   src={profileImage} 
                   alt="Jaishree" 
-                  className="w-full h-full object-cover grayscale object-center scale-[1.3] transition-transform duration-500 hover:scale-[1.4] hover:grayscale-0"
+                  className="w-full h-full object-cover object-center scale-[1.3] transition-transform duration-500 hover:scale-[1.4]"
                 />
               </div>
             </div>
@@ -118,99 +118,6 @@ const Index = () => {
             />
           </div>
         </motion.div>
-      </div>
-
-      {/* 3. NORDIC SECTIONS: Row of 4 Vertical Cards */}
-      <div className="w-full max-w-[1200px] px-4 mt-28">
-        <h2 className="font-archivo font-black tracking-tight text-3xl uppercase mb-12 text-black text-center md:text-left">
-          PORTFOLIO SECTIONS
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Card 1: Data Science */}
-          <div className="flex flex-col gap-3 group">
-            <div className="aspect-[4/5] rounded-[2rem] overflow-hidden border border-[#E5DFD3] shadow-sm relative bg-zinc-100">
-              <img 
-                src={numberImg} 
-                alt="Data Science" 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div>
-              <h3 className="font-archivo font-bold text-sm uppercase text-black tracking-wider">
-                01. DATA SCIENCE
-              </h3>
-              <p className="text-xs text-zinc-500 font-sans mt-1">
-                Machine learning architectures and predictive modeling systems.
-              </p>
-            </div>
-          </div>
-
-          {/* Card 2: AI & LLMs */}
-          <div className="flex flex-col gap-3 group">
-            <div className="aspect-[4/5] rounded-[2rem] overflow-hidden border border-[#E5DFD3] shadow-sm relative bg-zinc-100">
-              <img 
-                src={electricityImg} 
-                alt="AI Development" 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div>
-              <h3 className="font-archivo font-bold text-sm uppercase text-black tracking-wider">
-                02. NLP & AGENTS
-              </h3>
-              <p className="text-xs text-zinc-500 font-sans mt-1">
-                Language models, RAG pipelines, and automated intelligence.
-              </p>
-            </div>
-          </div>
-
-          {/* Card 3: Systems & IoT */}
-          <div className="flex flex-col gap-3 group">
-            <div className="aspect-[4/5] rounded-[2rem] overflow-hidden border border-[#E5DFD3] shadow-sm relative bg-zinc-100">
-              <img 
-                src={radarImg} 
-                alt="Hardware Systems" 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div>
-              <h3 className="font-archivo font-bold text-sm uppercase text-black tracking-wider">
-                03. HARDWARE & IOT
-              </h3>
-              <p className="text-xs text-zinc-500 font-sans mt-1">
-                Sensor arrays, hardware integrations, and microcontrollers.
-              </p>
-            </div>
-          </div>
-
-          {/* Card 4: Design & Aesthetics */}
-          <div className="flex flex-col gap-3 group">
-            <div className="aspect-[4/5] rounded-[2rem] overflow-hidden border border-[#E5DFD3] shadow-sm relative bg-zinc-100">
-              <img 
-                src={f1Img} 
-                alt="Creative Design" 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div>
-              <h3 className="font-archivo font-bold text-sm uppercase text-black tracking-wider">
-                04. DESIGN LABS
-              </h3>
-              <p className="text-xs text-zinc-500 font-sans mt-1">
-                High-end UI, motion design, and publication layout art.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex justify-center mt-10">
-          <Link to="/projects">
-            <button className="px-6 py-2.5 bg-black text-white text-xs font-black tracking-widest uppercase rounded-full hover:bg-[#E30613] transition-colors">
-              EXPLORE WORK
-            </button>
-          </Link>
-        </div>
       </div>
 
       {/* 4. SPLIT HIGHLIGHT BLOCK: Split layout */}
