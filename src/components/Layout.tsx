@@ -35,12 +35,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1400px] px-4 md:px-12 z-50 top-6">
         <nav className={navContainer}>
-          {/* Classic Serif Typography Monogram Logo */}
+          {/* Cool F1 / Sunscreen styled slanted JB Logo */}
           <div className="flex items-center gap-6">
             <Link to="/" className="flex items-center group">
-              <span className="text-xl md:text-2xl font-black tracking-[0.2em] text-[#6e1227] transition-all duration-300 group-hover:scale-105 select-none font-serif uppercase">
-                JAISHREE<span className="text-zinc-400">.</span>
-              </span>
+              <div className="border-[2.5px] border-[#1C1917] group-hover:border-[#E30613] px-3.5 py-1.5 skew-x-[-12deg] transition-all duration-300 bg-white/40 shadow-sm">
+                <span className="font-archivo font-black text-xl md:text-2xl tracking-tighter italic block skew-x-[12deg] select-none leading-none">
+                  <span className="text-[#E30613]">J</span><span className="text-[#1C1917]">B</span>
+                </span>
+              </div>
             </Link>
           </div>
 
@@ -54,13 +56,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   key={item.path}
                   to={item.path}
                   className={`relative text-xs font-bold tracking-[0.25em] transition-colors duration-300 group
-                    ${isActive ? "text-[#6e1227]" : "text-zinc-500 hover:text-[#6e1227]"}`}
+                    ${isActive ? "text-[#E30613]" : "text-zinc-500 hover:text-[#E30613]"}`}
                 >
                   {item.label}
                   {isActive && (
                     <motion.span 
                       layoutId="activeNavIndicator"
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#6e1227] rounded-full" 
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#E30613] rounded-full" 
                     />
                   )}
                 </Link>
@@ -98,11 +100,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   to={item.path}
                   onClick={() => setMenuOpen(false)}
                   className={`relative text-2xl uppercase tracking-[0.35em] font-bold transition-colors 
-                              ${isActive ? "text-[#6e1227]" : "text-zinc-600"}`}
+                              ${isActive ? "text-[#E30613]" : "text-zinc-600"}`}
                 >
                   {item.label}
                   {isActive && (
-                    <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-[#6e1227] rounded-full" />
+                    <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-[#E30613] rounded-full" />
                   )}
                 </Link>
               );

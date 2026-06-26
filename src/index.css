@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Archivo:ital,wght@0,400;0,700;0,800;0,900;1,700;1,800;1,900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,10 +15,10 @@
     --popover: 36 24% 98%;
     --popover-foreground: 24 10% 10%;
 
-    --primary: 346 72% 25%;
+    --primary: 357 95% 46%;
     --primary-foreground: 38 30% 98%;
 
-    --primary-glow: 346 72% 35%;
+    --primary-glow: 357 95% 55%;
 
     --secondary: 36 15% 92%;
     --secondary-foreground: 24 10% 15%;
@@ -26,7 +26,7 @@
     --muted: 36 10% 90%;
     --muted-foreground: 24 5% 45%;
 
-    --accent: 346 72% 20%;
+    --accent: 357 95% 40%;
     --accent-foreground: 38 30% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,22 +34,22 @@
 
     --border: 38 20% 86%;
     --input: 38 20% 86%;
-    --ring: 346 72% 25%;
+    --ring: 357 95% 46%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 36 24% 98%;
     --sidebar-foreground: 24 10% 10%;
-    --sidebar-primary: 346 72% 25%;
+    --sidebar-primary: 357 95% 46%;
     --sidebar-primary-foreground: 38 30% 98%;
     --sidebar-accent: 36 15% 92%;
     --sidebar-accent-foreground: 24 10% 15%;
     --sidebar-border: 38 20% 86%;
-    --sidebar-ring: 346 72% 25%;
+    --sidebar-ring: 357 95% 46%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(346 72% 25%), hsl(346 72% 35%));
+    --gradient-primary: linear-gradient(135deg, hsl(357 95% 46%), hsl(357 95% 55%));
     --gradient-card: linear-gradient(145deg, hsl(36 24% 98%), hsl(36 20% 94%));
-    --shadow-glow: 0 0 40px -5px hsl(346 72% 25% / 0.15);
+    --shadow-glow: 0 0 40px -5px hsl(357 95% 46% / 0.15);
     --shadow-card: 0 8px 32px -8px hsl(36 20% 50% / 0.1);
   }
 }
@@ -65,7 +65,8 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cinzel', serif;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
   }
 }
 

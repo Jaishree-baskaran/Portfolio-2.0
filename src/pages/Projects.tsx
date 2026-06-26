@@ -67,35 +67,37 @@ const Projects = () => {
 
       <div className="relative z-10 w-full max-w-[1400px] flex flex-col gap-8 font-sans">
 
-        {/* Title Pill */}
-        <div className="bg-[#FCFAF7] border border-[#E5DFD3] px-8 py-5 flex items-center justify-center relative overflow-hidden rounded-[2rem] shadow-sm backdrop-blur-md">
+        {/* Title Pill with top right navigation controls */}
+        <div className="bg-white border border-[#E5DFD3] px-8 py-5 flex flex-row items-center justify-between relative overflow-hidden rounded-[2rem] shadow-sm backdrop-blur-md">
           <div className="absolute inset-0 bg-gradient-to-r from-white to-[#EFEAE2]/5 pointer-events-none" />
-          <h1 className="text-2xl md:text-3xl font-extrabold tracking-[0.2em] relative z-10 text-center uppercase text-[#1C1917] font-serif">
+          <h1 className="text-xl md:text-2xl font-black tracking-wider relative z-10 uppercase text-[#1C1917] font-archivo">
             Featured Projects
           </h1>
+          
+          <div className="flex items-center gap-3 relative z-10">
+            <span className="text-[#E30613] font-archivo font-black text-xs tracking-widest uppercase mr-2 hidden sm:inline-block">
+              {current + 1} / {projects.length}
+            </span>
+            <button
+              onClick={prev}
+              className="w-10 h-10 bg-[#FAF9F6] border border-[#E5DFD3] rounded-full flex items-center justify-center text-zinc-700 hover:bg-[#E30613] hover:text-white transition-all shadow-sm"
+              aria-label="Previous Project"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button
+              onClick={next}
+              className="w-10 h-10 bg-[#FAF9F6] border border-[#E5DFD3] rounded-full flex items-center justify-center text-zinc-700 hover:bg-[#E30613] hover:text-white transition-all shadow-sm"
+              aria-label="Next Project"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
         </div>
 
         {/* Advanced Slider Section */}
-        <div className="bg-[#FCFAF7] border border-[#E5DFD3] p-6 md:p-12 relative flex flex-col items-center justify-center min-h-[700px] shadow-sm rounded-[2.5rem] backdrop-blur-md">
+        <div className="bg-white border border-[#E5DFD3] p-6 md:p-12 relative flex flex-col items-center justify-center min-h-[600px] shadow-sm rounded-[2.5rem] backdrop-blur-md">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#EFEAE2]/5 pointer-events-none rounded-[2.5rem]" />
-
-          <div className="w-full flex items-center justify-between mb-8 z-20 px-4 md:px-8">
-            <button
-              onClick={prev}
-              className="w-14 h-14 bg-white border border-[#E5DFD3] rounded-full flex items-center justify-center text-zinc-700 hover:bg-[#6e1227] hover:text-white transition-all shrink-0 shadow-sm"
-            >
-              <ChevronLeft size={28} />
-            </button>
-            <div className="text-[#6e1227] tracking-[0.4em] text-xs font-bold uppercase hidden md:block">
-              {current + 1} / {projects.length}
-            </div>
-            <button
-              onClick={next}
-              className="w-14 h-14 bg-white border border-[#E5DFD3] rounded-full flex items-center justify-center text-zinc-700 hover:bg-[#6e1227] hover:text-white transition-all shrink-0 shadow-sm"
-            >
-              <ChevronRight size={28} />
-            </button>
-          </div>
 
           {/* The Slider Container */}
           <div className="relative w-full max-w-5xl h-[500px] md:h-[600px] perspective-[1500px] flex items-center justify-center">
@@ -160,7 +162,7 @@ const Projects = () => {
                       if (isNext) next();
                     }}
                   >
-                    <div className="w-full h-full bg-[#FCFAF7] rounded-3xl overflow-hidden border border-[#E5DFD3] shadow-md flex flex-col group backdrop-blur-xl">
+                    <div className="w-full h-full bg-white rounded-3xl overflow-hidden border border-[#E5DFD3] shadow-md flex flex-col group backdrop-blur-xl">
                       
                       {/* Image Section */}
                       <div className="h-1/2 relative overflow-hidden bg-zinc-100">
@@ -169,16 +171,16 @@ const Projects = () => {
                           alt={project.title}
                           className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#FCFAF7] via-transparent to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
                       </div>
 
                       {/* Content Section */}
                       <div className="h-1/2 p-6 md:p-8 flex flex-col justify-between relative bg-transparent">
                         <div>
-                          <div className="inline-block px-4 py-1.5 rounded-full border border-[#6e1227]/20 bg-[#6e1227]/5 text-[#6e1227] text-[10px] md:text-xs font-semibold tracking-widest uppercase mb-4">
+                          <div className="inline-block px-4 py-1.5 rounded-full border border-[#E30613]/20 bg-[#E30613]/5 text-[#E30613] text-[10px] md:text-xs font-semibold tracking-widest uppercase mb-4">
                             {project.highlight}
                           </div>
-                          <h2 className="text-xl md:text-2xl font-bold leading-tight mb-4 tracking-wide text-[#1C1917] font-serif">
+                          <h2 className="text-xl md:text-2xl font-bold leading-tight mb-4 tracking-wide text-[#1C1917] font-archivo">
                             {project.title}
                           </h2>
                           <p className="text-zinc-600 text-sm md:text-base leading-relaxed font-light font-sans">
@@ -188,7 +190,7 @@ const Projects = () => {
                         
                         {isActive && (
                           <div className="mt-4 flex justify-end font-sans">
-                            <div className="w-10 h-10 rounded-full bg-[#6e1227] hover:bg-[#540c1c] text-white flex items-center justify-center hover:scale-110 transition-all cursor-pointer shadow-[0_4px_15px_rgba(110,18,39,0.25)]">
+                            <div className="w-10 h-10 rounded-full bg-[#E30613] hover:bg-black text-white flex items-center justify-center hover:scale-110 transition-all cursor-pointer shadow-[0_4px_15px_rgba(227,6,19,0.25)]">
                               <ExternalLink size={18} />
                             </div>
                           </div>
