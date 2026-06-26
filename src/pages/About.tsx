@@ -98,28 +98,28 @@ const About = () => {
           </div>
         </div>
 
-        {/* Education Section */}
-        <div className="bg-[#FCFAF7] border border-[#E5DFD3] p-8 md:p-12 relative overflow-hidden rounded-[2.5rem] shadow-sm font-sans">
-          <div className="flex items-center gap-4 mb-12">
-             <h2 className="bg-[#E30613]/5 border border-[#E30613]/25 text-[#E30613] px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest">
-               Academic Background
-             </h2>
-          </div>
+         {/* Education Section */}
+         <div className="bg-white border border-[#E5DFD3] p-8 md:p-12 relative overflow-hidden rounded-[2.5rem] shadow-sm font-sans">
+           <div className="flex items-center gap-4 mb-10">
+              <h2 className="text-[#E30613] font-archivo font-black text-sm uppercase tracking-[0.25em]">
+                Academic Background
+              </h2>
+           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {educations.map((edu, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="bg-white border border-[#E5DFD3]/60 p-8 rounded-[2rem] hover:border-[#E30613]/25 hover:shadow-sm transition-all duration-300"
-              >
-                <div className="flex justify-between items-start mb-6">
-                  <div className="px-4 py-1.5 rounded-full bg-[#E30613]/5 border border-[#E30613]/20 text-[10px] font-bold tracking-widest uppercase text-[#E30613]">
-                    {edu.batch}
-                  </div>
-                </div>
+           <div className="grid md:grid-cols-2 gap-8">
+             {educations.map((edu, index) => (
+               <motion.div
+                 key={index}
+                 initial={{ opacity: 0, y: 20 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true }}
+                 className="bg-[#FAF9F6] border border-[#E5DFD3]/60 p-8 rounded-[2rem] hover:border-[#E30613]/25 hover:shadow-sm transition-all duration-300"
+               >
+                 <div className="flex justify-between items-start mb-4">
+                   <div className="text-[#E30613] font-archivo font-black text-[10px] tracking-widest uppercase">
+                     {edu.batch}
+                   </div>
+                 </div>
                 <h3 className="text-xl font-bold mb-2 text-[#1C1917] font-archivo">
                   {edu.institution}
                 </h3>
