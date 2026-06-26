@@ -8,96 +8,81 @@ interface ExperienceItem {
   time: string;
   type: string;
   tags: string[];
-  details: string[];
+  details: string; // Plain text paragraph, no bullets
+  subRoles?: { role: string; time: string; details: string }[]; // For Association of CSE
 }
 
 const workExperience: ExperienceItem[] = [
   {
     company: "CANIT Solutions",
-    role: "Software Developer Intern",
-    time: "Jan 2026",
+    role: "Software Developer (Technical Lead)",
+    time: "Jan 2026 - Present",
     type: "WORK",
-    tags: ["Python", "FastAPI", "Supabase", "LLM"],
-    details: [
-      "Engineered high-performance machine learning pipelines and optimized database queries to improve execution speeds.",
-      "Integrated secure FastAPI endpoints, facilitating smooth data ingestion for Large Language Model (LLM) workflows.",
-      "Optimized query execution times and designed scalable backend schemas."
-    ]
+    tags: ["Geospatial Viz", "Mapbox", "Leaflet", "AWS", "Predictive Analytics"],
+    details: "Architected and built critical geospatial visualization components for a government-backed Smart City platform, including side-by-side comparison views for multi-month spatial data (master-slave layer sync) and AI-powered change detection between time periods. Owned end-to-end development of scalable map-layer infrastructure using Mapbox and Leaflet, integrating QGIS/ArcGIS-sourced spatial data into AWS-backed real-time visualization workflows. Built CANIT Pulse (analytics platform with Meta/YouTube API integration, RBAC, automated reporting) and developed predictive analytics/anomaly detection models for Smart City urban intelligence."
   },
   {
     company: "SIMS Hospital",
-    role: "Web App Developer Intern",
-    time: "2025",
+    role: "Intern - Web App Developer",
+    time: "Jun 2025 - Apr 2026",
     type: "WORK",
-    tags: ["React", "TS", "Dashboard"],
-    details: [
-      "Designed and deployed responsive web dashboards, improving real-time access to patient diagnostics.",
-      "Enhanced frontend loading speeds by 30% through modular component structures and lazy loading patterns.",
-      "Assisted in configuring access controls to comply with secure clinical data management guidelines."
-    ]
+    tags: ["React", "TypeScript", "Android TV", "Performance"],
+    details: "Engineered a full-stack media management system for SRM Groups using React, TypeScript, and Android TV. Worked with operational data and system metrics to improve uptime and performance across 500+ connected devices."
   },
   {
     company: "Revature",
-    role: "AI/ML Developer Intern",
-    time: "2025",
+    role: "Project Intern - AI/ML Developer",
+    time: "Jun 2025 - Jul 2025",
     type: "WORK",
-    tags: ["Python", "ML", "NLP", "SQL"],
-    details: [
-      "Built and evaluated predictive ML models utilizing classification and regression techniques.",
-      "Engineered automated data preprocessing pipelines to clean and structure high-dimensional telemetry data.",
-      "Integrated Natural Language Processing (NLP) models into existing developer workflows."
-    ]
+    tags: ["ML Engine", "GitHub Bot", "Dashboard UI"],
+    details: "Built an ML-based course recommendation engine for personalized training, improving relevance by 25%. Developed an AI-powered GitHub PR bot to automate code reviews, reducing review time by 40%. Improved internal dashboards and UI workflows, enhancing data visibility and user satisfaction by 20%."
   },
   {
     company: "Rotork",
-    role: "Software Engineer Intern",
-    time: "2024",
+    role: "Project Intern - Software Engineer",
+    time: "Jun 2024 - Jul 2024",
     type: "WORK",
-    tags: ["APIs", "Firmware", "C#", "Testing"],
-    details: [
-      "Developed modular firmware scripts and integrated third-party hardware interface APIs.",
-      "Created automated test cases for system validation, raising test coverage by 20%.",
-      "Collaborated with cross-functional engineering teams on code reviews and system documentation."
-    ]
+    tags: ["Actuator GUI", "Data Integration", "Testing"],
+    details: "Designed and implemented a GUI to visualize actuator performance data, increasing data accessibility by 35%. Assisted in requirement gathering, data integration, and testing of performance visualization systems."
   }
 ];
 
 const leadershipExperience: ExperienceItem[] = [
   {
-    company: "CSE Association",
-    role: "President",
-    time: "University",
+    company: "Association of Computer Science Engineers",
+    role: "President / Joint Head",
+    time: "2024 - 2026",
     type: "LEADERSHIP",
-    tags: ["Management", "Symposium", "Leadership"],
-    details: [
-      "Led an executive team of 15 members to plan and execute major inter-university technical symposiums.",
-      "Organized coding bootcamps, workshops on emerging technologies, and expert guest lectures.",
-      "Facilitated collaborations with industry partners for student placement prep programs."
+    tags: ["Student Council", "Strategic Leadership", "Ubertech symposium"],
+    details: "", // Details handled by sub-roles
+    subRoles: [
+      {
+        role: "President (2025 - 2026)",
+        time: "2025 - 2026",
+        details: "Spearheaded departmental and student council initiatives, driving academic and extracurricular growth through strategic leadership. Directed and motivated a high-performing team of 56 members, fostering innovation and collaboration across key projects."
+      },
+      {
+        role: "Joint Head of Creative Design (2024 - 2025)",
+        time: "2024 - 2025",
+        details: "Orchestrated national-level events like Ubertech, overseeing design, registrations, and sponsorships with a focus on seamless execution. Led a dynamic team of 14, ensuring timely delivery and impactful event outcomes."
+      }
     ]
   },
   {
-    company: "Campus Newsletter",
-    role: "Editorial Head",
-    time: "University",
+    company: "Campus Overall Newsletter",
+    role: "Head of Student Editorial Team",
+    time: "2023 - 2026",
     type: "LEADERSHIP",
-    tags: ["Curation", "Editorial", "Layout"],
-    details: [
-      "Oversaw the end-to-end design, curation, copyediting, and print layout of the campus newsletter.",
-      "Managed a team of 10 student journalists, coordinating coverage of academic events.",
-      "Implemented digital newsletters to expand readership by 40%."
-    ]
+    tags: ["Espirito Newsletter", "Content Editing", "Publication Layout"],
+    details: "Led the student editorial team for Espirito, managing content creation, editing, and publication, increasing newsletter readership by 45% while ensuring on-time delivery."
   },
   {
     company: "Cybernetics Club",
     role: "Secretary & Asst. Secretary",
     time: "2020 - 2022",
     type: "LEADERSHIP",
-    tags: ["Robotics", "IoT", "Coordination"],
-    details: [
-      "Coordinated club activities, robotics exhibitions, and hackathons.",
-      "Conducted weekly workshops introducing microcontroller systems and basic IoT.",
-      "Represented the club in regional inter-college robotics competitions."
-    ]
+    tags: ["Robotics", "Microcontrollers", "Student Tech"],
+    details: "Served as Assistant Secretary (2020–2021) and Secretary (2021–2022) of the Cybernetics Club, leading student technology initiatives."
   }
 ];
 
@@ -148,7 +133,6 @@ const getWorkCardStyles = (idx: number) => {
 };
 
 const getLeadershipCardStyles = (idx: number) => {
-  // Three prominent colors: Black, Red, White
   const styles = [
     // 0: Black
     {
@@ -359,18 +343,26 @@ const Experience = () => {
               <div className="w-12 h-1 bg-[#E30613]" />
 
               <div className="flex flex-col gap-6">
-                {/* Description details */}
+                {/* Description details (no bulleting, just proper text paragraph) */}
                 <div>
                   <h4 className="font-archivo font-black text-xs uppercase tracking-widest text-[#E30613] mb-3">
-                    Key Contributions
+                    Description & Key Accomplishments
                   </h4>
-                  <ul className="space-y-3 list-disc list-inside text-zinc-700 text-sm leading-relaxed font-sans">
-                    {selectedExp.details.map((detail, idx) => (
-                      <li key={idx} className="pl-1">
-                        <span className="relative left-[-2px]">{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  
+                  {selectedExp.subRoles ? (
+                    <div className="space-y-6">
+                      {selectedExp.subRoles.map((sub, sIdx) => (
+                        <div key={sIdx} className="flex flex-col gap-2 border-l-2 border-[#E30613]/30 pl-4">
+                          <span className="text-zinc-700 font-archivo font-bold text-xs uppercase tracking-wider">{sub.role}</span>
+                          <p className="text-zinc-600 text-sm leading-relaxed font-sans">{sub.details}</p>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-zinc-700 text-sm leading-relaxed font-sans">
+                      {selectedExp.details}
+                    </p>
+                  )}
                 </div>
 
                 {/* Tech Stack */}
