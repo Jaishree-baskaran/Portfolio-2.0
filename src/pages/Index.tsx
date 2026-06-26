@@ -90,20 +90,21 @@ const Index = () => {
           className="bg-white rounded-[2.5rem] p-8 md:p-14 shadow-xl border border-[#E5DFD3]/40 flex flex-col md:flex-row items-center justify-between gap-10"
         >
           <div className="flex-1 flex flex-col items-start">
-            <h2 className="font-archivo font-black tracking-tight text-2xl md:text-3xl uppercase mb-6 text-black border-b-[3px] border-[#E30613] pb-2">
+            <h2 className="font-archivo font-black tracking-tight text-2xl md:text-3xl uppercase mb-4 text-black border-b-[3px] border-[#E30613] pb-2">
               INFORMATION
             </h2>
+            
+            {/* Active Status Display */}
+            <div className="flex items-center gap-2.5 mb-6">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#E30613] animate-pulse shrink-0" />
+              <span className="font-archivo font-black text-xs md:text-sm uppercase tracking-widest text-[#E30613]">
+                AI/ML Analyst at Canit Solutions
+              </span>
+            </div>
+
             <p className="text-zinc-700 font-medium text-sm md:text-base leading-relaxed max-w-2xl font-sans">
               Jaishree Baskaran is an analytical AI/ML systems developer and computational researcher, engineering optimized solutions in data science, predictive modeling, and system architectures. Specializing in Deep Learning, NLP, and high-performance algorithms, she bridges mathematical rigor with modern application design.
             </p>
-            <div className="mt-8 flex gap-3 flex-wrap">
-              <span className="px-3.5 py-1.5 bg-[#FAF9F6] border border-[#E5DFD3] rounded-full text-[10px] font-bold uppercase tracking-wider text-zinc-600">
-                AI/ML Analyst at Canit Solutions
-              </span>
-              <span className="px-3.5 py-1.5 bg-[#FAF9F6] border border-[#E5DFD3] rounded-full text-[10px] font-bold uppercase tracking-wider text-zinc-600">
-                President of Association of CSE
-              </span>
-            </div>
           </div>
 
           {/* Sunscreen style secondary visual */}
