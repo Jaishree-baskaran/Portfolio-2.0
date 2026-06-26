@@ -67,37 +67,35 @@ const Projects = () => {
 
       <div className="relative z-10 w-full max-w-[1400px] flex flex-col gap-8 font-sans">
 
-        {/* Title Pill with top right navigation controls */}
-        <div className="bg-white border border-[#E5DFD3] px-8 py-5 flex flex-row items-center justify-between relative overflow-hidden rounded-[2rem] shadow-sm backdrop-blur-md">
+        {/* Title Pill */}
+        <div className="bg-white border border-[#E5DFD3] px-8 py-5 flex items-center justify-center relative overflow-hidden rounded-[2rem] shadow-sm backdrop-blur-md">
           <div className="absolute inset-0 bg-gradient-to-r from-white to-[#EFEAE2]/5 pointer-events-none" />
-          <h1 className="text-xl md:text-2xl font-black tracking-wider relative z-10 uppercase text-[#1C1917] font-archivo">
+          <h1 className="text-xl md:text-2xl font-black tracking-[0.2em] relative z-10 text-center uppercase text-[#1C1917] font-archivo">
             Featured Projects
           </h1>
-          
-          <div className="flex items-center gap-3 relative z-10">
-            <span className="text-[#E30613] font-archivo font-black text-xs tracking-widest uppercase mr-2 hidden sm:inline-block">
-              {current + 1} / {projects.length}
-            </span>
-            <button
-              onClick={prev}
-              className="w-10 h-10 bg-[#FAF9F6] border border-[#E5DFD3] rounded-full flex items-center justify-center text-zinc-700 hover:bg-[#E30613] hover:text-white transition-all shadow-sm"
-              aria-label="Previous Project"
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <button
-              onClick={next}
-              className="w-10 h-10 bg-[#FAF9F6] border border-[#E5DFD3] rounded-full flex items-center justify-center text-zinc-700 hover:bg-[#E30613] hover:text-white transition-all shadow-sm"
-              aria-label="Next Project"
-            >
-              <ChevronRight size={20} />
-            </button>
-          </div>
         </div>
 
         {/* Advanced Slider Section */}
         <div className="bg-white border border-[#E5DFD3] p-6 md:p-12 relative flex flex-col items-center justify-center min-h-[600px] shadow-sm rounded-[2.5rem] backdrop-blur-md">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#EFEAE2]/5 pointer-events-none rounded-[2.5rem]" />
+
+          {/* Left Arrow Button on the Side */}
+          <button
+            onClick={prev}
+            className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 z-40 w-11 h-11 md:w-14 md:h-14 bg-[#FAF9F6] border border-[#E5DFD3] rounded-full flex items-center justify-center text-zinc-700 hover:bg-[#E30613] hover:text-white transition-all shadow-md shrink-0"
+            aria-label="Previous Project"
+          >
+            <ChevronLeft size={24} />
+          </button>
+
+          {/* Right Arrow Button on the Side */}
+          <button
+            onClick={next}
+            className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 z-40 w-11 h-11 md:w-14 md:h-14 bg-[#FAF9F6] border border-[#E5DFD3] rounded-full flex items-center justify-center text-zinc-700 hover:bg-[#E30613] hover:text-white transition-all shadow-md shrink-0"
+            aria-label="Next Project"
+          >
+            <ChevronRight size={24} />
+          </button>
 
           {/* The Slider Container */}
           <div className="relative w-full max-w-5xl h-[500px] md:h-[600px] perspective-[1500px] flex items-center justify-center">
@@ -177,7 +175,7 @@ const Projects = () => {
                       {/* Content Section */}
                       <div className="h-1/2 p-6 md:p-8 flex flex-col justify-between relative bg-transparent">
                         <div>
-                          <div className="inline-block px-4 py-1.5 rounded-full border border-[#E30613]/20 bg-[#E30613]/5 text-[#E30613] text-[10px] md:text-xs font-semibold tracking-widest uppercase mb-4">
+                          <div className="text-[#E30613] text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-4 font-archivo">
                             {project.highlight}
                           </div>
                           <h2 className="text-xl md:text-2xl font-bold leading-tight mb-4 tracking-wide text-[#1C1917] font-archivo">

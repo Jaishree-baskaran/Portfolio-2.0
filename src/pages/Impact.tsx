@@ -99,10 +99,10 @@ const Impact = () => {
         {/* ================= PUBLICATIONS ================= */}
         <section className="w-full">
           <div className="text-center mb-16">
-            <span className="text-xs font-semibold text-[#6e1227] tracking-[0.3em] uppercase block mb-3 font-sans">
+            <span className="text-xs font-semibold text-[#E30613] tracking-[0.3em] uppercase block mb-3 font-sans">
               // Scientific Contributions
             </span>
-            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-[0.2em] text-[#1C1917] font-serif">
+            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-[0.2em] text-[#1C1917] font-archivo">
               Publications
             </h2>
           </div>
@@ -112,21 +112,21 @@ const Impact = () => {
               <motion.div
                 key={index}
                 whileHover={{ y: -5 }}
-                className="bg-[#FCFAF7] border border-[#E5DFD3] rounded-3xl overflow-hidden shadow-sm flex flex-col backdrop-blur-md hover:border-[#6e1227]/25 hover:shadow-md transition-all duration-300"
+                className="bg-white border border-[#E5DFD3] rounded-3xl overflow-hidden shadow-sm flex flex-col backdrop-blur-md hover:border-[#E30613]/25 hover:shadow-md transition-all duration-300"
               >
                 <div className="w-full h-56 overflow-hidden bg-zinc-100">
                   <img 
                     src={pub.image} 
                     alt={pub.title} 
-                    className="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-500" 
+                    className="w-full h-full object-cover transition-all duration-500" 
                   />
                 </div>
                 
                 <div className="p-6 flex flex-col">
-                  <div className="text-[#6e1227] text-xs font-semibold tracking-wider mb-3 uppercase font-sans">
+                  <div className="text-[#E30613] text-xs font-semibold tracking-wider mb-3 uppercase font-sans">
                     {pub.date}
                   </div>
-                  <h3 className="text-xl font-bold text-[#1C1917] mb-3 leading-snug font-serif">
+                  <h3 className="text-xl font-bold text-[#1C1917] mb-3 leading-snug font-archivo">
                     {pub.title}
                   </h3>
                   <p className="text-zinc-600 text-sm leading-relaxed font-light">
@@ -141,10 +141,10 @@ const Impact = () => {
         {/* ================= ACHIEVEMENTS ================= */}
         <section className="w-full">
           <div className="text-center mb-16">
-            <span className="text-xs font-semibold text-[#6e1227] tracking-[0.3em] uppercase block mb-3 font-sans">
+            <span className="text-xs font-semibold text-[#E30613] tracking-[0.3em] uppercase block mb-3 font-sans">
               // Highlights & Awards
             </span>
-            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-[0.2em] text-[#1C1917] font-serif">
+            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-[0.2em] text-[#1C1917] font-archivo">
               Achievements
             </h2>
           </div>
@@ -154,18 +154,18 @@ const Impact = () => {
               <motion.div
                 key={index}
                 whileHover={{ y: -5 }}
-                className="bg-[#FCFAF7] border border-[#E5DFD3] rounded-3xl overflow-hidden shadow-sm flex flex-col backdrop-blur-md hover:border-[#6e1227]/25 hover:shadow-md transition-all duration-300"
+                className="bg-white border border-[#E5DFD3] rounded-3xl overflow-hidden shadow-sm flex flex-col backdrop-blur-md hover:border-[#E30613]/25 hover:shadow-md transition-all duration-300"
               >
                 <div className="w-full h-48 overflow-hidden bg-zinc-100">
                   <img 
                     src={ach.image} 
                     alt={ach.title} 
-                    className="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-500" 
+                    className="w-full h-full object-cover transition-all duration-500" 
                   />
                 </div>
                 
                 <div className="p-6 flex flex-col">
-                  <h3 className="text-lg font-bold text-[#1C1917] mb-2 leading-snug font-serif">
+                  <h3 className="text-lg font-bold text-[#1C1917] mb-2 leading-snug font-archivo">
                     {ach.title}
                   </h3>
                   <p className="text-zinc-600 text-sm leading-relaxed font-light">
@@ -180,10 +180,10 @@ const Impact = () => {
         {/* ================= CERTIFICATIONS ================= */}
         <section className="w-full mt-4">
           <div className="text-center mb-16">
-            <span className="text-xs font-semibold text-[#6e1227] tracking-[0.3em] uppercase block mb-3 font-sans">
+            <span className="text-xs font-semibold text-[#E30613] tracking-[0.3em] uppercase block mb-3 font-sans">
               // Professional Credentials
             </span>
-            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-[0.2em] text-[#1C1917] font-serif">
+            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-[0.2em] text-[#1C1917] font-archivo">
               Certifications
             </h2>
           </div>
@@ -191,10 +191,10 @@ const Impact = () => {
           <div className="flex flex-col gap-12 max-w-5xl mx-auto">
              {/* Technical */}
              <div>
-               <h3 className="text-[#6e1227]/60 font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-[#E5DFD3] pb-4 text-center md:text-left font-serif">Technical</h3>
+               <h3 className="text-[#E30613] font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-[#E5DFD3] pb-4 text-center md:text-left font-archivo">Technical</h3>
                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                   {technicalCerts.map((cert, i) => (
-                     <div key={i} className="bg-white border border-[#E5DFD3]/60 p-5 rounded-2xl flex items-center justify-center text-center shadow-sm hover:border-[#6e1227]/20 hover:bg-zinc-50/50 transition-all duration-300">
+                     <div key={i} className="bg-white border border-[#E5DFD3]/60 p-5 rounded-2xl flex items-center justify-center text-center shadow-sm hover:border-[#E30613]/20 hover:bg-zinc-50/50 transition-all duration-300">
                         <span className="font-sans text-zinc-700 text-xs md:text-sm font-light tracking-wide">{cert}</span>
                      </div>
                   ))}
@@ -203,10 +203,10 @@ const Impact = () => {
 
              {/* Space Science */}
              <div>
-               <h3 className="text-[#6e1227]/60 font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-[#E5DFD3] pb-4 text-center md:text-left font-serif">Space Science</h3>
+               <h3 className="text-[#E30613] font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-[#E5DFD3] pb-4 text-center md:text-left font-archivo">Space Science</h3>
                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {spaceScienceCerts.map((cert, i) => (
-                     <div key={i} className="bg-white border border-[#E5DFD3]/60 p-5 rounded-2xl flex items-center justify-center text-center shadow-sm hover:border-[#6e1227]/20 hover:bg-zinc-50/50 transition-all duration-300">
+                     <div key={i} className="bg-white border border-[#E5DFD3]/60 p-5 rounded-2xl flex items-center justify-center text-center shadow-sm hover:border-[#E30613]/20 hover:bg-zinc-50/50 transition-all duration-300">
                         <span className="font-sans text-zinc-700 text-xs md:text-sm font-light tracking-wide">{cert}</span>
                      </div>
                   ))}
@@ -215,10 +215,10 @@ const Impact = () => {
 
              {/* Data Science */}
              <div>
-               <h3 className="text-[#6e1227]/60 font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-[#E5DFD3] pb-4 text-center md:text-left font-serif">Data Science</h3>
+               <h3 className="text-[#E30613] font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-[#E5DFD3] pb-4 text-center md:text-left font-archivo">Data Science</h3>
                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                   {dataScienceCerts.map((cert, i) => (
-                     <div key={i} className="bg-white border border-[#E5DFD3]/60 p-5 rounded-2xl flex items-center justify-center text-center shadow-sm hover:border-[#6e1227]/20 hover:bg-zinc-50/50 transition-all duration-300">
+                     <div key={i} className="bg-white border border-[#E5DFD3]/60 p-5 rounded-2xl flex items-center justify-center text-center shadow-sm hover:border-[#E30613]/20 hover:bg-zinc-50/50 transition-all duration-300">
                         <span className="font-sans text-zinc-700 text-xs md:text-sm font-light tracking-wide">{cert}</span>
                      </div>
                   ))}
