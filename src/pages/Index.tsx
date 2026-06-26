@@ -120,16 +120,57 @@ const Index = () => {
       {/* 4. SPLIT HIGHLIGHT BLOCK: Split layout */}
       <div className="w-full max-w-[1200px] px-4 mt-28">
         <div className="w-full rounded-[2.5rem] overflow-hidden grid grid-cols-1 md:grid-cols-2 shadow-lg min-h-[350px]">
-          {/* Left Block: Speed Red Visual */}
-          <div className="bg-[#E30613] relative overflow-hidden flex items-center justify-center p-8">
-            <div className="absolute inset-0 opacity-[0.15] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #000 1.5px, transparent 1.5px)', backgroundSize: '24px 24px' }} />
-            <div className="text-white text-[120px] font-black italic tracking-tighter select-none font-archivo uppercase skew-x-[-12deg] opacity-25 absolute left-4 bottom-0 leading-none">
-              F1
-            </div>
-            <div className="relative z-10 text-center">
-              <h3 className="font-archivo font-black italic text-4xl text-white tracking-tighter uppercase leading-none skew-x-[-6deg]">
-                FAST-PACED <br/>DEVELOPMENT
-              </h3>
+          {/* Left Block: Telemetry Speed Red Visual */}
+          <div className="bg-[#E30613] relative overflow-hidden flex flex-col items-center justify-center p-8 md:p-12 min-h-[300px]">
+            <div className="absolute inset-0 opacity-[0.12] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #000 1.5px, transparent 1.5px)', backgroundSize: '24px 24px' }} />
+            
+            {/* Animated Telemetry Graph */}
+            <div className="relative w-full max-w-[340px] flex flex-col gap-4">
+              <div className="flex justify-between items-center text-[10px] text-white/80 font-mono font-black tracking-widest bg-black/15 px-3 py-1 rounded">
+                <span>GEAR 8</span>
+                <span className="text-white/40">|</span>
+                <span>RPM 12,420</span>
+                <span className="text-white/40">|</span>
+                <span className="text-white">328 KM/H</span>
+              </div>
+              
+              <div className="relative h-[120px] bg-black/10 rounded-2xl border border-white/10 p-4 flex items-center justify-center overflow-hidden">
+                <svg viewBox="0 0 300 100" className="w-full h-full text-white" stroke="currentColor" fill="none">
+                  {/* Grid Lines */}
+                  <line x1="0" y1="20" x2="300" y2="20" stroke="rgba(255,255,255,0.06)" strokeDasharray="3 3" />
+                  <line x1="0" y1="50" x2="300" y2="50" stroke="rgba(255,255,255,0.06)" strokeDasharray="3 3" />
+                  <line x1="0" y1="80" x2="300" y2="80" stroke="rgba(255,255,255,0.06)" strokeDasharray="3 3" />
+                  
+                  {/* Live Telemetry Path */}
+                  <motion.path
+                    d="M 10 70 Q 50 20 90 60 T 170 30 T 250 80 T 290 40"
+                    stroke="#FFFFFF"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: 1 }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                  />
+                  
+                  {/* Glowing telemetry tracker dot */}
+                  <motion.circle
+                    r="4"
+                    fill="#FFFFFF"
+                    className="shadow-lg"
+                    animate={{
+                      cx: [10, 50, 90, 130, 170, 210, 250, 290],
+                      cy: [70, 40, 60, 45, 30, 55, 80, 40]
+                    }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                  />
+                </svg>
+              </div>
+
+              <div className="text-center">
+                <h3 className="font-archivo font-black italic text-2xl text-white tracking-tighter uppercase leading-none skew-x-[-6deg]">
+                  FAST-PACED DEVELOPMENT
+                </h3>
+              </div>
             </div>
           </div>
 
