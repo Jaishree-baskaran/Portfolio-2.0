@@ -18,7 +18,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   // Light parchment editorial theme background and text colors
   const layoutBg = "noise-bg min-h-screen bg-[#FAF7F2] text-[#1C1917] font-sans relative overflow-x-hidden";
-  const navContainer = "glass-pill bg-[#FAF7F2]/70 backdrop-blur-xl border border-[#E5DFD3] text-[#1C1917] flex items-center justify-between px-6 py-3.5 md:px-10 md:py-4 shadow-sm relative z-50";
+  const navContainer = "bg-white border border-[#E5DFD3] text-[#1C1917] flex items-center justify-between px-6 py-3.5 md:px-10 md:py-4 shadow-sm rounded-[2.5rem] relative z-50";
 
   return (
     <div className={layoutBg}>

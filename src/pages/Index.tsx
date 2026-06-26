@@ -44,7 +44,7 @@ const Index = () => {
           <div className="flex-1 flex flex-col items-start gap-4">
 
             <h1 className="font-archivo font-black italic tracking-tighter text-white uppercase text-[3rem] sm:text-[4.5rem] md:text-[5.5rem] lg:text-[6.5rem] leading-[0.9] skew-x-[-6deg]">
-              WELCOME TO <br/>THE ARENA
+              JAISHREE <br/>BASKARAN
             </h1>
 
             <p className="text-white/90 text-sm md:text-base font-medium max-w-lg mt-4 leading-relaxed font-sans">
