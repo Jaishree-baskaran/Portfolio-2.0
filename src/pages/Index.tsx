@@ -30,7 +30,7 @@ const Index = () => {
     <div className="relative min-h-screen w-full flex flex-col items-center bg-[#FAF9F6] text-[#1C1917] overflow-x-hidden">
       
       {/* 1. HERO BANNER: Full-Width Deep Red F1 Block */}
-      <div className="w-full bg-[#E30613] pt-40 pb-44 px-4 md:px-12 relative overflow-hidden flex flex-col items-center justify-center z-10">
+      <div className="w-full bg-[#D05340] pt-40 pb-44 px-4 md:px-12 relative overflow-hidden flex flex-col items-center justify-center z-10">
         {/* F1 Tech Grid Backdrop */}
         <div className="absolute inset-0 opacity-[0.08] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #000 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }} />
         
@@ -66,17 +66,60 @@ const Index = () => {
           </div>
 
           {/* Right Hero Image Frame */}
-          <div className="relative flex justify-center items-center w-full lg:w-auto">
-            {/* Minimalist slanted picture box */}
-            <div className="relative w-[280px] h-[340px] md:w-[340px] md:h-[420px] bg-white p-2.5 rounded-[2rem] shadow-2xl skew-y-[-2deg]">
-              <div className="w-full h-full overflow-hidden rounded-[1.7rem] bg-zinc-100 relative">
-                <img 
-                  src={profileImage} 
-                  alt="Jaishree" 
-                  className="w-full h-full object-cover object-center scale-[1.3] transition-transform duration-500 hover:scale-[1.4]"
-                />
-              </div>
+          <div className="relative flex justify-center items-center w-full lg:w-auto h-[450px] md:h-[550px] px-8 py-12 select-none shrink-0">
+            
+            {/* Concentric Circles Background */}
+            <div className="absolute w-[320px] h-[320px] md:w-[420px] md:h-[420px] border border-white/20 rounded-full pointer-events-none z-0" />
+            <div className="absolute w-[400px] h-[400px] md:w-[520px] md:h-[520px] border border-white/10 rounded-full pointer-events-none z-0" />
+
+            {/* Circular Profile Photo Frame */}
+            <div className="relative w-[240px] h-[240px] md:w-[320px] md:h-[320px] rounded-full border-4 border-white shadow-2xl overflow-hidden bg-zinc-100 z-10 flex-shrink-0">
+              <img 
+                src={profileImage} 
+                alt="Jaishree" 
+                className="w-full h-full object-cover object-center scale-[1.3] transition-transform duration-500 hover:scale-[1.4]"
+              />
             </div>
+
+            {/* Floating Badges */}
+            {/* 1. AI/ML: Top Left */}
+            <div className="absolute -translate-x-[75px] -translate-y-[100px] md:-translate-x-[115px] md:-translate-y-[130px] z-20 flex items-center gap-2.5 bg-[#FAF9F6]/95 border border-[#E5DFD3] py-2 px-3.5 rounded-2xl shadow-md backdrop-blur-md">
+              <div className="w-7 h-7 rounded-full bg-[#D05340]/10 flex items-center justify-center text-[#D05340] shrink-0">
+                <Brain size={14} />
+              </div>
+              <span className="font-archivo font-black text-[9px] md:text-[10px] tracking-widest text-[#1C1917] uppercase leading-none">AI / ML</span>
+            </div>
+
+            {/* 2. Space Enthusiast: Mid-Right */}
+            <div className="absolute translate-x-[95px] -translate-y-[50px] md:translate-x-[145px] md:-translate-y-[65px] z-20 flex items-center gap-2.5 bg-[#FAF9F6]/95 border border-[#E5DFD3] py-2 px-3.5 rounded-2xl shadow-md backdrop-blur-md">
+              <div className="w-7 h-7 rounded-full bg-[#D05340]/10 flex items-center justify-center text-[#D05340] shrink-0">
+                <Globe size={14} />
+              </div>
+              <span className="font-archivo font-black text-[9px] md:text-[10px] tracking-widest text-[#1C1917] uppercase leading-none text-left">
+                Space <br className="hidden md:block" />Enthusiast
+              </span>
+            </div>
+
+            {/* 3. Data Science: Bottom Left */}
+            <div className="absolute -translate-x-[100px] translate-y-[70px] md:-translate-x-[150px] md:translate-y-[90px] z-20 flex items-center gap-2.5 bg-[#FAF9F6]/95 border border-[#E5DFD3] py-2 px-3.5 rounded-2xl shadow-md backdrop-blur-md">
+              <div className="w-7 h-7 rounded-full bg-[#D05340]/10 flex items-center justify-center text-[#D05340] shrink-0">
+                <BarChart size={14} />
+              </div>
+              <span className="font-archivo font-black text-[9px] md:text-[10px] tracking-widest text-[#1C1917] uppercase leading-none text-left">
+                Data <br className="hidden md:block" />Science
+              </span>
+            </div>
+
+            {/* 4. Problem Solver: Bottom Right */}
+            <div className="absolute translate-x-[65px] translate-y-[110px] md:translate-x-[100px] md:translate-y-[145px] z-20 flex items-center gap-2.5 bg-[#FAF9F6]/95 border border-[#E5DFD3] py-2 px-3.5 rounded-2xl shadow-md backdrop-blur-md">
+              <div className="w-7 h-7 rounded-full bg-[#D05340]/10 flex items-center justify-center text-[#D05340] shrink-0">
+                <Code2 size={14} />
+              </div>
+              <span className="font-archivo font-black text-[9px] md:text-[10px] tracking-widest text-[#1C1917] uppercase leading-none text-left">
+                Problem <br className="hidden md:block" />Solver
+              </span>
+            </div>
+
           </div>
         </div>
       </div>
@@ -90,20 +133,20 @@ const Index = () => {
           className="bg-white rounded-[2.5rem] p-8 md:p-14 shadow-xl border border-[#E5DFD3]/40 flex flex-col md:flex-row items-center justify-between gap-10"
         >
           <div className="flex-1 flex flex-col items-start">
-            <h2 className="font-archivo font-black tracking-tight text-2xl md:text-3xl uppercase mb-4 text-black border-b-[3px] border-[#E30613] pb-2">
+            <h2 className="font-archivo font-black tracking-tight text-2xl md:text-3xl uppercase mb-4 text-black border-b-[3px] border-[#D05340] pb-2">
               INFORMATION
             </h2>
             
             {/* Active Status Display */}
             <div className="flex items-center gap-2.5 mb-6">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#E30613] animate-pulse shrink-0" />
-              <span className="font-archivo font-black text-xs md:text-sm uppercase tracking-widest text-[#E30613]">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#D05340] animate-pulse shrink-0" />
+              <span className="font-archivo font-black text-xs md:text-sm uppercase tracking-widest text-[#D05340]">
                 AI/ML Analyst at Canit Solutions
               </span>
             </div>
 
             <p className="text-zinc-700 font-medium text-sm md:text-base leading-relaxed max-w-2xl font-sans">
-              Jaishree Baskaran is an analytical AI/ML systems developer and computational researcher, engineering optimized solutions in data science, predictive modeling, and system architectures. Specializing in Deep Learning, NLP, and high-performance algorithms, she bridges mathematical rigor with modern application design.
+              Jaishree Baskaran is an AI/ML developer and full-stack software engineer passionate about creating intelligent, scalable, and user-focused applications. With expertise in machine learning, deep learning, natural language processing, and modern web technologies, she builds innovative solutions that bridge artificial intelligence with seamless digital experiences.
             </p>
           </div>
 
@@ -122,7 +165,7 @@ const Index = () => {
       <div className="w-full max-w-[1200px] px-4 mt-28">
         <div className="w-full rounded-[2.5rem] overflow-hidden grid grid-cols-1 md:grid-cols-2 shadow-lg min-h-[350px]">
           {/* Left Block: Telemetry Speed Red Visual */}
-          <div className="bg-[#E30613] relative overflow-hidden flex flex-col items-center justify-center p-8 md:p-12 min-h-[300px]">
+          <div className="bg-[#D05340] relative overflow-hidden flex flex-col items-center justify-center p-8 md:p-12 min-h-[300px]">
             <div className="absolute inset-0 opacity-[0.12] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #000 1.5px, transparent 1.5px)', backgroundSize: '24px 24px' }} />
             
             {/* Animated Telemetry Graph */}
@@ -177,14 +220,14 @@ const Index = () => {
 
           {/* Right Block: Dark Charcoal information */}
           <div className="bg-[#1C1917] text-white p-8 md:p-14 flex flex-col justify-center">
-            <h3 className="font-archivo font-black text-2xl uppercase tracking-wider mb-4 text-[#E30613]">
+            <h3 className="font-archivo font-black text-2xl uppercase tracking-wider mb-4 text-[#D05340]">
               ENGINEERING SPEED
             </h3>
             <p className="text-zinc-300 font-sans font-light text-sm md:text-base leading-relaxed">
               Applying agile methodology and rapid prototyping to machine learning research. Building high-throughput systems that process complex information datasets with absolute reliability.
             </p>
             <div className="mt-8">
-              <Link to="/about" className="inline-flex items-center gap-2 text-xs font-black tracking-widest text-[#E30613] hover:text-white uppercase transition-colors">
+              <Link to="/about" className="inline-flex items-center gap-2 text-xs font-black tracking-widest text-[#D05340] hover:text-white uppercase transition-colors">
                 MEET JAISHREE <ArrowRight size={14} />
               </Link>
             </div>
@@ -202,9 +245,9 @@ const Index = () => {
           {skillCategories.map((cat, idx) => (
              <div 
                key={idx} 
-               className="bg-white border border-[#E5DFD3] rounded-[2rem] p-8 shadow-sm flex flex-col gap-6 hover:border-[#E30613]/30 transition-all duration-300"
+               className="bg-white border border-[#E5DFD3] rounded-[2rem] p-8 shadow-sm flex flex-col gap-6 hover:border-[#D05340]/30 transition-all duration-300"
              >
-                <h3 className="text-base font-archivo font-black uppercase tracking-wider text-[#E30613]">
+                <h3 className="text-base font-archivo font-black uppercase tracking-wider text-[#D05340]">
                   {cat.title}
                 </h3>
                 <div className="flex flex-wrap gap-2">

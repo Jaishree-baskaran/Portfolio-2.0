@@ -16,37 +16,43 @@ const projects = [
     image: electricityImg,
     description: "An elegant, highly optimized architecture tracking real-time electricity consumption. Seamlessly built with JavaScript and C to process localized usage metrics with precision.",
     highlight: "Real-time Usage Tracking",
+    link: "https://github.com/Jaishree-baskaran/library-management"
   },
   {
     title: "Search the Number",
     image: numberImg,
     description: "A sophisticated Python engine utilizing Dijkstra's algorithm. It intuitively navigates complex graph structures to compute the optimal shortest path in a dynamic gaming environment.",
     highlight: "Graph Algorithm Engine",
+    link: "#"
   },
   {
     title: "RADAR Sensor System",
     image: radarImg,
     description: "A cutting-edge ultrasonic hardware integration powered by Arduino. It provides real-time spatial awareness and object detection, translating physical environments into actionable data.",
     highlight: "Spatial Hardware Integration",
+    link: "#"
   },
   {
-    title: "Handwriting Digitization",
+    title: "Write 'n Sight",
     image: WnsImg,
     description: "A robust machine learning pipeline designed to seamlessly convert handwritten manuscripts into digitized text, bridging the gap between analog writing and digital accessibility.",
     highlight: "Machine Learning Pipeline",
+    link: "https://github.com/Jaishree-baskaran/write-n-Sight/"
   },
   {
-    title: "Inventory Intelligence",
+    title: "Panda management system",
     image: InventoryImg,
     description: "A sleek, responsive React application integrated with Firebase. It delivers instantaneous data synchronization for meticulous household and organizational inventory management.",
     highlight: "Live Data Synchronization",
+    link: "https://github.com/Jaishree-baskaran/PandaStock_Inventory_Management_App"
   },
   {
     title: "Quantum Qulambu",
     image: QQImg,
     description: "A premium digital platform bridging the gap between South Indian gourmet delivery and holistic health. Designed to foster community well-being through curated culinary experiences.",
     highlight: "Holistic Health Platform",
-  },
+    link: "https://github.com/Jaishree-baskaran/quantum-qulambu-eats-gold"
+  }
 ];
 
 const Projects = () => {
@@ -82,7 +88,7 @@ const Projects = () => {
           {/* Left Arrow Button on the Side */}
           <button
             onClick={prev}
-            className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 z-40 w-11 h-11 md:w-14 md:h-14 bg-[#FAF9F6] border border-[#E5DFD3] rounded-full flex items-center justify-center text-zinc-700 hover:bg-[#E30613] hover:text-white transition-all shadow-md shrink-0"
+            className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 z-40 w-11 h-11 md:w-14 md:h-14 bg-[#FAF9F6] border border-[#E5DFD3] rounded-full flex items-center justify-center text-zinc-700 hover:bg-[#D05340] hover:text-white transition-all shadow-md shrink-0"
             aria-label="Previous Project"
           >
             <ChevronLeft size={24} />
@@ -91,7 +97,7 @@ const Projects = () => {
           {/* Right Arrow Button on the Side */}
           <button
             onClick={next}
-            className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 z-40 w-11 h-11 md:w-14 md:h-14 bg-[#FAF9F6] border border-[#E5DFD3] rounded-full flex items-center justify-center text-zinc-700 hover:bg-[#E30613] hover:text-white transition-all shadow-md shrink-0"
+            className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 z-40 w-11 h-11 md:w-14 md:h-14 bg-[#FAF9F6] border border-[#E5DFD3] rounded-full flex items-center justify-center text-zinc-700 hover:bg-[#D05340] hover:text-white transition-all shadow-md shrink-0"
             aria-label="Next Project"
           >
             <ChevronRight size={24} />
@@ -175,7 +181,7 @@ const Projects = () => {
                       {/* Content Section */}
                       <div className="h-1/2 p-6 md:p-8 flex flex-col justify-between relative bg-transparent">
                         <div>
-                          <div className="text-[#E30613] text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-4 font-archivo">
+                          <div className="text-[#D05340] text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-4 font-archivo">
                             {project.highlight}
                           </div>
                           <h2 className="text-xl md:text-2xl font-bold leading-tight mb-4 tracking-wide text-[#1C1917] font-archivo">
@@ -186,11 +192,16 @@ const Projects = () => {
                           </p>
                         </div>
                         
-                        {isActive && (
+                        {isActive && project.link && project.link !== "#" && (
                           <div className="mt-4 flex justify-end font-sans">
-                            <div className="w-10 h-10 rounded-full bg-[#E30613] hover:bg-black text-white flex items-center justify-center hover:scale-110 transition-all cursor-pointer shadow-[0_4px_15px_rgba(227,6,19,0.25)]">
+                            <a 
+                              href={project.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="w-10 h-10 rounded-full bg-[#D05340] hover:bg-black text-white flex items-center justify-center hover:scale-110 transition-all cursor-pointer shadow-[0_4px_15px_rgba(208,83,64,0.25)]"
+                            >
                               <ExternalLink size={18} />
-                            </div>
+                            </a>
                           </div>
                         )}
                       </div>

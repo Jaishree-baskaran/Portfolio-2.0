@@ -15,6 +15,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   
   const isHome = location.pathname === "/";
+  const activeRed = isHome ? "#D05340" : "#D05340";
 
   // Light parchment editorial theme background and text colors
   const layoutBg = "noise-bg min-h-screen bg-[#FAF7F2] text-[#1C1917] font-sans relative overflow-x-hidden";
@@ -35,14 +36,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1400px] px-4 md:px-12 z-50 top-6">
         <nav className={navContainer}>
-          {/* Cool F1 / Sunscreen styled slanted JB Logo */}
           <div className="flex items-center gap-6">
             <Link to="/" className="flex items-center group">
-              <div className="border-[2.5px] border-[#1C1917] group-hover:border-[#E30613] px-3.5 py-1.5 skew-x-[-12deg] transition-all duration-300 bg-white/40 shadow-sm">
-                <span className="font-archivo font-black text-xl md:text-2xl tracking-tighter italic block skew-x-[12deg] select-none leading-none">
-                  <span className="text-[#E30613]">J</span><span className="text-[#1C1917]">B</span>
-                </span>
-              </div>
+              <span className="font-archivo font-black text-2xl md:text-3xl tracking-tighter italic select-none leading-none transition-all duration-300 group-hover:scale-105 block">
+                <span className="text-[#D05340]">J</span>
+                <span className="text-[#1C1917] transition-colors duration-300 group-hover:text-[#D05340]">B</span>
+              </span>
             </Link>
           </div>
 
@@ -55,14 +54,17 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`relative text-xs font-bold tracking-[0.25em] transition-colors duration-300 group
-                    ${isActive ? "text-[#E30613]" : "text-zinc-500 hover:text-[#E30613]"}`}
+                  className="relative text-xs font-bold tracking-[0.25em] transition-colors duration-300 group"
+                  style={{ color: isActive ? activeRed : "rgb(113, 113, 122)" }}
+                  onMouseEnter={(e) => { if (!isActive) e.currentTarget.style.color = activeRed; }}
+                  onMouseLeave={(e) => { if (!isActive) e.currentTarget.style.color = "rgb(113, 113, 122)"; }}
                 >
                   {item.label}
                   {isActive && (
                     <motion.span 
                       layoutId="activeNavIndicator"
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#E30613] rounded-full" 
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full" 
+                      style={{ backgroundColor: activeRed }}
                     />
                   )}
                 </Link>
@@ -99,12 +101,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   key={item.path}
                   to={item.path}
                   onClick={() => setMenuOpen(false)}
-                  className={`relative text-2xl uppercase tracking-[0.35em] font-bold transition-colors 
-                              ${isActive ? "text-[#E30613]" : "text-zinc-600"}`}
+                  className="relative text-2xl uppercase tracking-[0.35em] font-bold transition-colors"
+                  style={{ color: isActive ? activeRed : "rgb(82, 82, 91)" }}
                 >
                   {item.label}
                   {isActive && (
-                    <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-[#E30613] rounded-full" />
+                    <span className="absolute -bottom-2 left-0 right-0 h-0.5 rounded-full" style={{ backgroundColor: activeRed }} />
                   )}
                 </Link>
               );
