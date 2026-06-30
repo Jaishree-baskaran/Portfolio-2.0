@@ -41,7 +41,7 @@ const Index = () => {
           JB
         </div>
 
-        <div className="relative z-10 w-full max-w-[1250px] flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div className="relative z-10 w-full max-w-[1250px] flex flex-col lg:flex-row lg:items-start justify-between gap-12">
           {/* Left Hero Content */}
           <div className="flex-1 flex flex-col items-start gap-4">
 
@@ -68,19 +68,19 @@ const Index = () => {
           </div>
 
           {/* Right Hero Column: Unified ID Card Visual */}
-          <div className="relative flex justify-center items-center w-full lg:w-auto h-[480px] md:h-[580px] px-4 md:px-12 select-none shrink-0">
+          <div className="relative flex justify-center lg:justify-end items-start lg:pt-3 w-full lg:w-auto select-none shrink-0">
             
             {/* The ID Card Container */}
             <motion.div
-              initial={{ rotate: -1.5 }}
+              initial={{ rotate: -4.5 }}
               whileHover={{ rotate: 0, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="relative w-[320px] h-[210px] md:w-[460px] md:h-[290px] bg-[#FFF8EF] border-[2.5px] border-[#1C1917] rounded-[2rem] shadow-2xl p-4 md:p-6 flex items-center justify-between gap-4 md:gap-6 overflow-hidden"
+              className="relative w-[340px] h-[225px] md:w-[500px] md:h-[315px] bg-[#FFF8EF] border-[2.5px] border-[#1C1917] rounded-[2rem] shadow-2xl p-4 md:p-6 flex items-center justify-between gap-4 md:gap-6 overflow-hidden"
             >
               {/* LEFT SIDE: Passport Photo Frame */}
-              <div className="w-[100px] md:w-[140px] h-[160px] md:h-[220px] border border-dashed border-[#1C1917]/50 rounded-[1.2rem] p-1.5 flex flex-col justify-between relative bg-white shrink-0">
+              <div className="w-[110px] md:w-[155px] h-[180px] md:h-[240px] border border-dashed border-[#1C1917]/50 rounded-[1.2rem] p-1.5 flex flex-col justify-between relative bg-white shrink-0">
                 {/* Year Label */}
-                <span className="text-[7px] md:text-[9px] font-mono font-bold text-zinc-400">since 2005</span>
+                <span className="text-[8px] md:text-[10px] font-mono font-bold text-zinc-400">since 2005</span>
                 
                 {/* Profile Image */}
                 <div className="w-full aspect-[4/5] overflow-hidden rounded-[0.8rem] bg-zinc-100 border border-zinc-200">
@@ -101,19 +101,19 @@ const Index = () => {
               <div 
                 className="flex-1 h-full flex flex-col justify-between py-1.5 pl-2 select-none"
                 style={{
-                  backgroundImage: 'repeating-linear-gradient(#FFF8EF, #FFF8EF 23px, #E5DFD3 24px)'
+                  backgroundImage: 'repeating-linear-gradient(#FFF8EF, #FFF8EF 24px, #E5DFD3 25px)'
                 }}
               >
                 {/* Headers */}
                 <div>
-                  <h3 className="font-archivo font-black text-base md:text-xl tracking-tight text-[#930500] leading-none uppercase">
+                  <h3 className="font-archivo font-black text-lg md:text-2xl tracking-tight text-[#930500] leading-none uppercase">
                     JAY
                   </h3>
-                  <span className="text-[7px] md:text-[9px] font-mono tracking-widest text-zinc-400 uppercase">AI/ML & FULL-STACK ENGINEER</span>
+                  <span className="text-[8px] md:text-[10px] font-mono tracking-widest text-zinc-400 uppercase">AI/ML & FULL-STACK ENGINEER</span>
                 </div>
 
                 {/* Interests List */}
-                <div className="space-y-4 md:space-y-5 text-[8px] md:text-[11px] font-archivo font-bold text-[#1C1917] tracking-wider uppercase leading-none pl-1">
+                <div className="space-y-4 md:space-y-5 text-[9px] md:text-[12px] font-archivo font-bold text-[#1C1917] tracking-wider uppercase leading-none pl-1">
                   <div>● MACHINE LEARNING & AI</div>
                   <div>● SPACE ENTHUSIAST & SCIENCE</div>
                   <div>● DATA SCIENCE ARCHITECTURES</div>
@@ -121,7 +121,7 @@ const Index = () => {
                 </div>
 
                 {/* Bottom Stats */}
-                <div className="flex justify-end items-center text-[6px] md:text-[8px] font-mono text-zinc-400">
+                <div className="flex justify-end items-center text-[8px] md:text-[10px] font-mono text-zinc-400">
                   <span>CHENNAI</span>
                 </div>
               </div>
