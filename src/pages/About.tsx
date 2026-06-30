@@ -47,11 +47,11 @@ const About = () => {
              <div className="w-20 h-0.5 bg-[#D05340] rounded-full" />
 
              <p className="text-zinc-600 text-base md:text-lg leading-relaxed max-w-2xl font-light">
-               Jaishree Baskaran is an AI/ML developer and full-stack software engineer passionate about creating intelligent, scalable, and user-focused applications. With expertise in machine learning, deep learning, natural language processing, and modern web technologies, she builds innovative solutions that bridge artificial intelligence with seamless digital experiences.
+               I am an AI/ML Developer and Full-Stack Software Engineer driven by a passion for transforming complex computational concepts into high-impact digital realities. With extensive expertise in machine learning, deep learning, natural language processing, and modern web architectures, I build intelligent systems that scale.
                <br /><br />
-               With a rigorous approach to system development and technical analysis, she prioritizes clarity, structural integrity, and composure in execution. She focuses on questioning assumptions, engineering with purpose, and delivering high-impact solutions.
+               From architecting master-slave real-time map infrastructures for government smart city platforms to designing specialized AI agent bots and predictive analytics engines, I deliver solutions that bridge advanced mathematical modeling with clean, premium user experiences. I don't just write code—I design resilient digital environments and high-performance algorithms.
                <br /><br />
-               Her work is driven by a commitment to depth and operational excellence, ensuring that every project she leads or contributes to carries precise intent and responsible execution.
+               I approach every project with absolute intent, operational excellence, and technical precision. Known for questioning assumptions and leading with composure, I focus on engineering smart, context-aware platforms that solve actual, high-stakes problems.
              </p>
            </motion.div>
 

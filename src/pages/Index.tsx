@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import profileImage from "@/assets/cool jb.jpeg";
 import secondaryImage from "@/assets/cool jb 2.jpeg";
+import jb2Image from "@/assets/jb 2.jpeg";
 import { Brain, Globe, BarChart, Code2, ArrowRight } from "lucide-react";
 
 // Import sample images for the 4 vertical cards
@@ -75,7 +76,7 @@ const Index = () => {
             {/* Circular Profile Photo Frame */}
             <div className="relative w-[240px] h-[240px] md:w-[320px] md:h-[320px] rounded-full border-4 border-white shadow-2xl overflow-hidden bg-zinc-100 z-10 flex-shrink-0">
               <img 
-                src={profileImage} 
+                src={jb2Image} 
                 alt="Jaishree" 
                 className="w-full h-full object-cover object-center scale-[1.3] transition-transform duration-500 hover:scale-[1.4]"
               />
@@ -146,14 +147,14 @@ const Index = () => {
             </div>
 
             <p className="text-zinc-700 font-medium text-sm md:text-base leading-relaxed max-w-2xl font-sans">
-              Jaishree Baskaran is an AI/ML developer and full-stack software engineer passionate about creating intelligent, scalable, and user-focused applications. With expertise in machine learning, deep learning, natural language processing, and modern web technologies, she builds innovative solutions that bridge artificial intelligence with seamless digital experiences.
+              I am an AI/ML Developer and Full-Stack Software Engineer driven by a passion for transforming complex computational concepts into high-impact digital realities. Leveraging expertise in deep learning, NLP, and modern web architectures, I engineer resilient smart city platforms, AI agents, and predictive analytics models that solve high-stakes problems.
             </p>
           </div>
 
           {/* Sunscreen style secondary visual */}
           <div className="w-32 h-32 md:w-44 md:h-44 rounded-[2rem] overflow-hidden border border-[#E5DFD3] bg-zinc-50 shrink-0 shadow-inner">
             <img 
-              src={secondaryImage} 
+              src={profileImage} 
               alt="Jaishree Monogram Visual" 
               className="w-full h-full object-cover object-center scale-105"
             />
