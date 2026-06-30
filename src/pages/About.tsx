@@ -23,12 +23,12 @@ const About = () => {
       
       {/* Background shading for the About page */}
       <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] rounded-full bg-[#EFEAE2]/20 blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-[10%] left-[-10%] w-[450px] h-[450px] rounded-full bg-[#FAF7F2] blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[10%] left-[-10%] w-[450px] h-[450px] rounded-full bg-[#FFF8EF] blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 w-full max-w-[1400px] flex flex-col gap-8">
 
         {/* Hero Card */}
-        <div className="bg-[#FCFAF7] border border-[#E5DFD3] p-8 md:p-16 relative flex flex-col xl:flex-row items-center gap-16 overflow-hidden rounded-[2.5rem] shadow-sm">
+        <div className="bg-[#FFF8EF] border border-[#E5DFD3] p-8 md:p-16 relative flex flex-col xl:flex-row items-center gap-16 overflow-hidden rounded-[2.5rem] shadow-sm">
            
            <div className="absolute inset-0 bg-gradient-to-br from-white to-[#EFEAE2]/10 pointer-events-none" />
            
@@ -44,7 +44,7 @@ const About = () => {
                ABOUT ME
              </h1>
 
-             <div className="w-20 h-0.5 bg-[#D05340] rounded-full" />
+             <div className="w-20 h-0.5 bg-[#930500] rounded-full" />
 
              <p className="text-zinc-600 text-base md:text-lg leading-relaxed max-w-2xl font-light">
                I am an AI/ML Developer and Full-Stack Software Engineer driven by a passion for transforming complex computational concepts into high-impact digital realities. With extensive expertise in machine learning, deep learning, natural language processing, and modern web architectures, I build intelligent systems that scale.
@@ -62,7 +62,7 @@ const About = () => {
              transition={{ duration: 0.5, delay: 0.2 }}
              className="w-full xl:w-[420px] relative z-10 shrink-0"
            >
-             <div className="relative rounded-[2.5rem] overflow-hidden p-2.5 bg-white border border-[#E5DFD3] shadow-md">
+             <div className="relative rounded-[2.5rem] overflow-hidden p-2.5 bg-[#FFF8EF] border border-[#E5DFD3] shadow-md">
                <div className="rounded-[2rem] overflow-hidden w-full aspect-[4/5] relative bg-zinc-100">
                  <img
                    src={aboutImage}
@@ -78,20 +78,20 @@ const About = () => {
 
         {/* Core Domains of Focus - Portfolio POV Addition */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 font-sans">
-          <div className="bg-[#FCFAF7] border border-[#E5DFD3] p-8 rounded-[2rem] shadow-sm">
-            <h3 className="text-lg font-bold text-[#D05340] mb-3 font-archivo">01 / Machine Learning</h3>
+          <div className="bg-[#FFF8EF] border border-[#E5DFD3] p-8 rounded-[2rem] shadow-sm">
+            <h3 className="text-lg font-bold text-[#930500] mb-3 font-archivo">01 / Machine Learning</h3>
             <p className="text-zinc-600 text-sm font-light leading-relaxed">
               Designing advanced prediction models, supervised/unsupervised classifiers, and neural networks to extract structural meaning from high-dimensional datasets.
             </p>
           </div>
-          <div className="bg-[#FCFAF7] border border-[#E5DFD3] p-8 rounded-[2rem] shadow-sm">
-            <h3 className="text-lg font-bold text-[#D05340] mb-3 font-archivo">02 / Language Processing</h3>
+          <div className="bg-[#FFF8EF] border border-[#E5DFD3] p-8 rounded-[2rem] shadow-sm">
+            <h3 className="text-lg font-bold text-[#930500] mb-3 font-archivo">02 / Language Processing</h3>
             <p className="text-zinc-600 text-sm font-light leading-relaxed">
               Leveraging transformers, large language models (LLMs), and RAG configurations to build highly responsive, context-aware semantic tools.
             </p>
           </div>
-          <div className="bg-[#FCFAF7] border border-[#E5DFD3] p-8 rounded-[2rem] shadow-sm">
-            <h3 className="text-lg font-bold text-[#D05340] mb-3 font-archivo">03 / Software Architecture</h3>
+          <div className="bg-[#FFF8EF] border border-[#E5DFD3] p-8 rounded-[2rem] shadow-sm">
+            <h3 className="text-lg font-bold text-[#930500] mb-3 font-archivo">03 / Software Architecture</h3>
             <p className="text-zinc-600 text-sm font-light leading-relaxed">
               Constructing optimized database architectures and robust API endpoints with structured coding standards to scale algorithms efficiently.
             </p>
@@ -99,9 +99,9 @@ const About = () => {
         </div>
 
          {/* Education Section */}
-         <div className="bg-white border border-[#E5DFD3] p-8 md:p-12 relative overflow-hidden rounded-[2.5rem] shadow-sm font-sans">
+         <div className="bg-[#FFF8EF] border border-[#E5DFD3] p-8 md:p-12 relative overflow-hidden rounded-[2.5rem] shadow-sm font-sans">
            <div className="flex items-center gap-4 mb-10">
-              <h2 className="text-[#D05340] font-archivo font-black text-sm uppercase tracking-[0.25em]">
+              <h2 className="text-[#930500] font-archivo font-black text-sm uppercase tracking-[0.25em]">
                 Academic Background
               </h2>
            </div>
@@ -113,17 +113,17 @@ const About = () => {
                  initial={{ opacity: 0, y: 20 }}
                  whileInView={{ opacity: 1, y: 0 }}
                  viewport={{ once: true }}
-                 className="bg-[#FAF9F6] border border-[#E5DFD3]/60 p-8 rounded-[2rem] hover:border-[#D05340]/25 hover:shadow-sm transition-all duration-300"
+                 className="bg-[#FFF8EF] border border-[#E5DFD3]/60 p-8 rounded-[2rem] hover:border-[#930500]/25 hover:shadow-sm transition-all duration-300"
                >
                  <div className="flex justify-between items-start mb-4">
-                   <div className="text-[#D05340] font-archivo font-black text-[10px] tracking-widest uppercase">
+                   <div className="text-[#930500] font-archivo font-black text-[10px] tracking-widest uppercase">
                      {edu.batch}
                    </div>
                  </div>
                 <h3 className="text-xl font-bold mb-2 text-[#1C1917] font-archivo">
                   {edu.institution}
                 </h3>
-                <h4 className="text-xs font-semibold uppercase tracking-widest text-[#D05340]/80 mb-6">
+                <h4 className="text-xs font-semibold uppercase tracking-widest text-[#930500]/80 mb-6">
                   {edu.degree}
                 </h4>
                 <p className="text-zinc-600 text-sm leading-relaxed font-light font-sans">

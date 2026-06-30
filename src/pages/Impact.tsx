@@ -92,7 +92,7 @@ const Impact = () => {
       
       {/* Background shading for the Impact page */}
       <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] rounded-full bg-[#EFEAE2]/20 blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-[20%] left-[-10%] w-[450px] h-[450px] rounded-full bg-[#FAF7F2] blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[20%] left-[-10%] w-[450px] h-[450px] rounded-full bg-[#FFF8EF] blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 w-full max-w-[1200px] flex flex-col gap-24 mt-10 font-sans">
 
@@ -109,7 +109,7 @@ const Impact = () => {
               <motion.div
                 key={index}
                 whileHover={{ y: -5 }}
-                className="bg-white border border-[#E5DFD3] rounded-3xl overflow-hidden shadow-sm flex flex-col backdrop-blur-md hover:border-[#D05340]/25 hover:shadow-md transition-all duration-300"
+                className="bg-[#FFF8EF] border border-[#E5DFD3] rounded-3xl overflow-hidden shadow-sm flex flex-col backdrop-blur-md hover:border-[#930500]/25 hover:shadow-md transition-all duration-300"
               >
                 <div className="w-full h-56 overflow-hidden bg-zinc-100">
                   <img 
@@ -120,7 +120,7 @@ const Impact = () => {
                 </div>
                 
                 <div className="p-6 flex flex-col">
-                  <div className="text-[#D05340] text-xs font-semibold tracking-wider mb-3 uppercase font-sans">
+                  <div className="text-[#930500] text-xs font-semibold tracking-wider mb-3 uppercase font-sans">
                     {pub.date}
                   </div>
                   <h3 className="text-xl font-bold text-[#1C1917] mb-3 leading-snug font-archivo">
@@ -148,7 +148,7 @@ const Impact = () => {
               <motion.div
                 key={index}
                 whileHover={{ y: -5 }}
-                className="bg-white border border-[#E5DFD3] rounded-3xl overflow-hidden shadow-sm flex flex-col backdrop-blur-md hover:border-[#D05340]/25 hover:shadow-md transition-all duration-300"
+                className="bg-[#FFF8EF] border border-[#E5DFD3] rounded-3xl overflow-hidden shadow-sm flex flex-col backdrop-blur-md hover:border-[#930500]/25 hover:shadow-md transition-all duration-300"
               >
                 <div className="w-full h-48 overflow-hidden bg-zinc-100">
                   <img 
@@ -182,10 +182,10 @@ const Impact = () => {
           <div className="flex flex-col gap-12 max-w-5xl mx-auto">
              {/* Technical */}
              <div>
-               <h3 className="text-[#D05340] font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-[#E5DFD3] pb-4 text-center md:text-left font-archivo">Technical</h3>
+               <h3 className="text-[#930500] font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-[#E5DFD3] pb-4 text-center md:text-left font-archivo">Technical</h3>
                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                   {technicalCerts.map((cert, i) => (
-                     <div key={i} className="bg-white border border-[#E5DFD3]/60 p-5 rounded-2xl flex items-center justify-center text-center shadow-sm hover:border-[#D05340]/20 hover:bg-zinc-50/50 transition-all duration-300">
+                     <div key={i} className="bg-[#FFF8EF] border border-[#E5DFD3]/60 p-5 rounded-2xl flex items-center justify-center text-center shadow-sm hover:border-[#930500]/20 hover:bg-zinc-50/50 transition-all duration-300">
                         <span className="font-sans text-zinc-700 text-xs md:text-sm font-light tracking-wide">{cert}</span>
                      </div>
                   ))}
@@ -194,10 +194,10 @@ const Impact = () => {
 
              {/* Space Science */}
              <div>
-               <h3 className="text-[#D05340] font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-[#E5DFD3] pb-4 text-center md:text-left font-archivo">Space Science</h3>
+               <h3 className="text-[#930500] font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-[#E5DFD3] pb-4 text-center md:text-left font-archivo">Space Science</h3>
                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {spaceScienceCerts.map((cert, i) => (
-                     <div key={i} className="bg-white border border-[#E5DFD3]/60 p-5 rounded-2xl flex items-center justify-center text-center shadow-sm hover:border-[#D05340]/20 hover:bg-zinc-50/50 transition-all duration-300">
+                     <div key={i} className="bg-[#FFF8EF] border border-[#E5DFD3]/60 p-5 rounded-2xl flex items-center justify-center text-center shadow-sm hover:border-[#930500]/20 hover:bg-zinc-50/50 transition-all duration-300">
                         <span className="font-sans text-zinc-700 text-xs md:text-sm font-light tracking-wide">{cert}</span>
                      </div>
                   ))}
@@ -206,10 +206,10 @@ const Impact = () => {
 
              {/* Data Science */}
              <div>
-               <h3 className="text-[#D05340] font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-[#E5DFD3] pb-4 text-center md:text-left font-archivo">Data Science</h3>
+               <h3 className="text-[#930500] font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-[#E5DFD3] pb-4 text-center md:text-left font-archivo">Data Science</h3>
                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                   {dataScienceCerts.map((cert, i) => (
-                     <div key={i} className="bg-white border border-[#E5DFD3]/60 p-5 rounded-2xl flex items-center justify-center text-center shadow-sm hover:border-[#D05340]/20 hover:bg-zinc-50/50 transition-all duration-300">
+                     <div key={i} className="bg-[#FFF8EF] border border-[#E5DFD3]/60 p-5 rounded-2xl flex items-center justify-center text-center shadow-sm hover:border-[#930500]/20 hover:bg-zinc-50/50 transition-all duration-300">
                         <span className="font-sans text-zinc-700 text-xs md:text-sm font-light tracking-wide">{cert}</span>
                      </div>
                   ))}

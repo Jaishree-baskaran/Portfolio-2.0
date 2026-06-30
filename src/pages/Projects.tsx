@@ -69,12 +69,12 @@ const Projects = () => {
       
       {/* Background shading for the Projects page */}
       <div className="absolute top-[20%] left-[-10%] w-[400px] h-[400px] rounded-full bg-[#EFEAE2]/20 blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-[20%] right-[-10%] w-[450px] h-[450px] rounded-full bg-[#FAF7F2] blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[20%] right-[-10%] w-[450px] h-[450px] rounded-full bg-[#FFF8EF] blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 w-full max-w-[1400px] flex flex-col gap-8 font-sans">
 
         {/* Title Pill */}
-        <div className="bg-white border border-[#E5DFD3] px-8 py-5 flex items-center justify-center relative overflow-hidden rounded-[2rem] shadow-sm backdrop-blur-md">
+        <div className="bg-[#FFF8EF] border border-[#E5DFD3] px-8 py-5 flex items-center justify-center relative overflow-hidden rounded-[2rem] shadow-sm backdrop-blur-md">
           <div className="absolute inset-0 bg-gradient-to-r from-white to-[#EFEAE2]/5 pointer-events-none" />
           <h1 className="text-xl md:text-2xl font-black tracking-[0.2em] relative z-10 text-center uppercase text-[#1C1917] font-archivo">
             Featured Projects
@@ -82,13 +82,13 @@ const Projects = () => {
         </div>
 
         {/* Advanced Slider Section */}
-        <div className="bg-white border border-[#E5DFD3] p-6 md:p-12 relative flex flex-col items-center justify-center min-h-[600px] shadow-sm rounded-[2.5rem] backdrop-blur-md">
+        <div className="bg-[#FFF8EF] border border-[#E5DFD3] p-6 md:p-12 relative flex flex-col items-center justify-center min-h-[600px] shadow-sm rounded-[2.5rem] backdrop-blur-md">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#EFEAE2]/5 pointer-events-none rounded-[2.5rem]" />
 
           {/* Left Arrow Button on the Side */}
           <button
             onClick={prev}
-            className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 z-40 w-11 h-11 md:w-14 md:h-14 bg-[#FAF9F6] border border-[#E5DFD3] rounded-full flex items-center justify-center text-zinc-700 hover:bg-[#D05340] hover:text-white transition-all shadow-md shrink-0"
+            className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 z-40 w-11 h-11 md:w-14 md:h-14 bg-[#FFF8EF] border border-[#E5DFD3] rounded-full flex items-center justify-center text-zinc-700 hover:bg-[#930500] hover:text-white transition-all shadow-md shrink-0"
             aria-label="Previous Project"
           >
             <ChevronLeft size={24} />
@@ -97,7 +97,7 @@ const Projects = () => {
           {/* Right Arrow Button on the Side */}
           <button
             onClick={next}
-            className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 z-40 w-11 h-11 md:w-14 md:h-14 bg-[#FAF9F6] border border-[#E5DFD3] rounded-full flex items-center justify-center text-zinc-700 hover:bg-[#D05340] hover:text-white transition-all shadow-md shrink-0"
+            className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 z-40 w-11 h-11 md:w-14 md:h-14 bg-[#FFF8EF] border border-[#E5DFD3] rounded-full flex items-center justify-center text-zinc-700 hover:bg-[#930500] hover:text-white transition-all shadow-md shrink-0"
             aria-label="Next Project"
           >
             <ChevronRight size={24} />
@@ -166,7 +166,7 @@ const Projects = () => {
                       if (isNext) next();
                     }}
                   >
-                    <div className="w-full h-full bg-white rounded-3xl overflow-hidden border border-[#E5DFD3] shadow-md flex flex-col group backdrop-blur-xl">
+                    <div className="w-full h-full bg-[#FFF8EF] rounded-3xl overflow-hidden border border-[#E5DFD3] shadow-md flex flex-col group backdrop-blur-xl">
                       
                       {/* Image Section */}
                       <div className="h-1/2 relative overflow-hidden bg-zinc-100">
@@ -181,7 +181,7 @@ const Projects = () => {
                       {/* Content Section */}
                       <div className="h-1/2 p-6 md:p-8 flex flex-col justify-between relative bg-transparent">
                         <div>
-                          <div className="text-[#D05340] text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-4 font-archivo">
+                          <div className="text-[#930500] text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-4 font-archivo">
                             {project.highlight}
                           </div>
                           <h2 className="text-xl md:text-2xl font-bold leading-tight mb-4 tracking-wide text-[#1C1917] font-archivo">
@@ -198,7 +198,7 @@ const Projects = () => {
                               href={project.link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="w-10 h-10 rounded-full bg-[#D05340] hover:bg-black text-white flex items-center justify-center hover:scale-110 transition-all cursor-pointer shadow-[0_4px_15px_rgba(208,83,64,0.25)]"
+                              className="w-10 h-10 rounded-full bg-[#930500] hover:bg-black text-white flex items-center justify-center hover:scale-110 transition-all cursor-pointer shadow-[0_4px_15px_rgba(147,5,0,0.25)]"
                             >
                               <ExternalLink size={18} />
                             </a>

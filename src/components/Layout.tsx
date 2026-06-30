@@ -15,11 +15,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   
   const isHome = location.pathname === "/";
-  const activeRed = isHome ? "#D05340" : "#D05340";
+  const activeRed = isHome ? "#930500" : "#930500";
 
   // Light parchment editorial theme background and text colors
-  const layoutBg = "noise-bg min-h-screen bg-[#FAF7F2] text-[#1C1917] font-sans relative overflow-x-hidden";
-  const navContainer = "bg-white border border-[#E5DFD3] text-[#1C1917] flex items-center justify-between px-6 py-3.5 md:px-10 md:py-4 shadow-sm rounded-[2.5rem] relative z-50";
+  const layoutBg = "noise-bg min-h-screen bg-[#FFF8EF] text-[#1C1917] font-sans relative overflow-x-hidden";
+  const navContainer = "bg-[#FFF8EF] border border-[#E5DFD3] text-[#1C1917] flex items-center justify-between px-6 py-3.5 md:px-10 md:py-4 shadow-sm rounded-[2.5rem] relative z-50";
 
   return (
     <div className={layoutBg}>
@@ -39,8 +39,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="flex items-center gap-6">
             <Link to="/" className="flex items-center group">
               <span className="font-archivo font-black text-2xl md:text-3xl tracking-tighter italic select-none leading-none transition-all duration-300 group-hover:scale-105 block">
-                <span className="text-[#D05340]">J</span>
-                <span className="text-[#1C1917] transition-colors duration-300 group-hover:text-[#D05340]">B</span>
+                <span className="text-[#930500]">J</span>
+                <span className="text-[#1C1917] transition-colors duration-300 group-hover:text-[#930500]">B</span>
               </span>
             </Link>
           </div>
@@ -91,7 +91,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 backdrop-blur-2xl flex flex-col items-center justify-center gap-8 bg-[#FAF7F2]/95"
+            className="fixed inset-0 z-40 backdrop-blur-2xl flex flex-col items-center justify-center gap-8 bg-[#FFF8EF]/95"
           >
             {navItems.map((item) => {
               const isActive = location.pathname === item.path;

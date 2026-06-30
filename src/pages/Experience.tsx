@@ -105,9 +105,9 @@ const getWorkCardStyles = (idx: number) => {
   const styles = [
     // 0: White
     {
-      bg: "bg-white text-[#1C1917]",
-      tagBg: "bg-[#FAF9F6] border-[#E5DFD3] text-zinc-600",
-      badge: "text-[#D05340]",
+      bg: "bg-[#FFF8EF] text-[#1C1917]",
+      tagBg: "bg-[#FFF8EF] border-[#E5DFD3] text-zinc-600",
+      badge: "text-[#930500]",
       role: "text-zinc-500",
       desc: "text-zinc-600",
       time: "text-zinc-400"
@@ -116,14 +116,14 @@ const getWorkCardStyles = (idx: number) => {
     {
       bg: "bg-[#1C1917] text-white",
       tagBg: "bg-zinc-800 border-zinc-700 text-zinc-300",
-      badge: "text-[#D05340]",
+      badge: "text-[#930500]",
       role: "text-zinc-400",
       desc: "text-zinc-300",
       time: "text-zinc-500"
     },
     // 2: Red
     {
-      bg: "bg-[#D05340] text-white",
+      bg: "bg-[#930500] text-white",
       tagBg: "bg-red-700/50 border-red-600 text-white",
       badge: "text-black",
       role: "text-red-200",
@@ -133,8 +133,8 @@ const getWorkCardStyles = (idx: number) => {
     // 3: Parchment
     {
       bg: "bg-[#EFEAE2] text-[#1C1917]",
-      tagBg: "bg-white border-[#DCD6C8] text-zinc-600",
-      badge: "text-[#D05340]",
+      tagBg: "bg-[#FFF8EF] border-[#DCD6C8] text-zinc-600",
+      badge: "text-[#930500]",
       role: "text-zinc-600",
       desc: "text-zinc-600",
       time: "text-zinc-500"
@@ -149,14 +149,14 @@ const getLeadershipCardStyles = (idx: number) => {
     {
       bg: "bg-[#1C1917] text-white",
       tagBg: "bg-zinc-800 border-zinc-700 text-zinc-300",
-      badge: "text-[#D05340]",
+      badge: "text-[#930500]",
       role: "text-zinc-400",
       desc: "text-zinc-300",
       time: "text-zinc-500"
     },
     // 1: Red
     {
-      bg: "bg-[#D05340] text-white",
+      bg: "bg-[#930500] text-white",
       tagBg: "bg-red-700/50 border-red-600 text-white",
       badge: "text-black",
       role: "text-red-200",
@@ -165,9 +165,9 @@ const getLeadershipCardStyles = (idx: number) => {
     },
     // 2: White
     {
-      bg: "bg-white text-[#1C1917]",
-      tagBg: "bg-[#FAF9F6] border-[#E5DFD3] text-zinc-600",
-      badge: "text-[#D05340]",
+      bg: "bg-[#FFF8EF] text-[#1C1917]",
+      tagBg: "bg-[#FFF8EF] border-[#E5DFD3] text-zinc-600",
+      badge: "text-[#930500]",
       role: "text-zinc-500",
       desc: "text-zinc-600",
       time: "text-zinc-400"
@@ -182,12 +182,12 @@ const Experience = () => {
       
       {/* Background shading */}
       <div className="absolute top-[30%] right-[-10%] w-[350px] h-[350px] rounded-full bg-[#EFEAE2]/20 blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-[20%] left-[-10%] w-[400px] h-[400px] rounded-full bg-[#FAF9F6] blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[20%] left-[-10%] w-[400px] h-[400px] rounded-full bg-[#FFF8EF] blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 w-full max-w-[1100px] flex flex-col gap-16">
 
         {/* Title */}
-        <div className="bg-white border border-[#E5DFD3] px-8 py-5 flex items-center justify-center relative overflow-hidden rounded-[2rem] shadow-sm backdrop-blur-md">
+        <div className="bg-[#FFF8EF] border border-[#E5DFD3] px-8 py-5 flex items-center justify-center relative overflow-hidden rounded-[2rem] shadow-sm backdrop-blur-md">
           <h1 className="text-xl md:text-2xl font-black tracking-[0.2em] relative z-10 text-center uppercase text-[#1C1917] font-archivo">
             Professional Journey
           </h1>
@@ -195,7 +195,7 @@ const Experience = () => {
 
         {/* Professional Jobs Section */}
         <div className="flex flex-col gap-6">
-          <h2 className="text-[#D05340] font-archivo font-black text-sm uppercase tracking-widest pl-2">
+          <h2 className="text-[#930500] font-archivo font-black text-sm uppercase tracking-widest pl-2">
             Work History
           </h2>
           
@@ -228,7 +228,7 @@ const Experience = () => {
 
                   {/* Bottom Card Info (Tech tags / Categories) */}
                   {exp.categories ? (
-                    <div className="mt-4 space-y-4 border-t border-[#D05340]/15 pt-4">
+                    <div className="mt-4 space-y-4 border-t border-[#930500]/15 pt-4">
                       {exp.categories.map((cat, cIdx) => (
                         <div key={cIdx} className="flex flex-col gap-1.5">
                           <span className={`font-archivo font-black text-[9px] uppercase tracking-wider ${theme.role === 'text-red-200' ? 'text-red-300' : 'text-zinc-500'}`}>
@@ -267,7 +267,7 @@ const Experience = () => {
 
         {/* Leadership Section */}
         <div className="flex flex-col gap-6 mt-6">
-          <h2 className="text-[#D05340] font-archivo font-black text-sm uppercase tracking-widest pl-2">
+          <h2 className="text-[#930500] font-archivo font-black text-sm uppercase tracking-widest pl-2">
             Leadership & Impact
           </h2>
           
@@ -296,7 +296,7 @@ const Experience = () => {
                     {exp.subRoles ? (
                       <div className="mt-4 space-y-4">
                         {exp.subRoles.map((sub, sIdx) => (
-                          <div key={sIdx} className="flex flex-col gap-1 border-l-2 border-[#D05340]/30 pl-3">
+                          <div key={sIdx} className="flex flex-col gap-1 border-l-2 border-[#930500]/30 pl-3">
                             <span className={`font-archivo font-bold text-[10px] uppercase tracking-wider ${theme.role}`}>{sub.role}</span>
                             <p className={`text-xs leading-relaxed font-sans ${theme.desc}`}>{sub.details}</p>
                           </div>
