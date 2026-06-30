@@ -70,17 +70,35 @@ const Index = () => {
           {/* Right Hero Column: Unified ID Card Visual */}
           <div className="relative flex justify-center items-center w-full lg:w-auto h-[480px] md:h-[580px] px-4 md:px-12 select-none shrink-0">
             
+            {/* Lanyard Strap hanging from top */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-5 h-24 bg-[#930500] shadow-md z-20 flex flex-col items-center">
+              {/* Small metal eyelet on the strap */}
+              <div className="w-2 h-2 rounded-full bg-zinc-300 border border-zinc-500 mt-14 shadow-inner" />
+            </div>
+            
+            {/* Lanyard Metal Clasp/Clip */}
+            <div className="absolute top-[86px] left-1/2 -translate-x-1/2 z-30 select-none pointer-events-none drop-shadow-md flex flex-col items-center">
+              <svg width="28" height="38" viewBox="0 0 32 42" fill="none" className="text-zinc-500 drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]">
+                {/* Metal loop/ring */}
+                <path d="M16 2 A 10 10 0 0 0 6 12 L 6 18 L 26 18 L 26 12 A 10 10 0 0 0 16 2 Z" stroke="currentColor" strokeWidth="3" fill="none" />
+                {/* Swivel buckle */}
+                <rect x="12" y="18" width="8" height="8" rx="1.5" fill="currentColor" stroke="currentColor" strokeWidth="1" />
+                {/* Snap hook clip entering the card slot */}
+                <path d="M16 26 C12 26, 10 29, 10 33 C10 38, 13 41, 16 41 C19 41, 22 38, 22 33 C22 29, 20 26, 16 26 Z" stroke="currentColor" strokeWidth="3" fill="none" />
+                {/* Clasp gate */}
+                <line x1="13" y1="31" x2="19" y2="36" stroke="currentColor" strokeWidth="2.5" />
+              </svg>
+            </div>
+
             {/* The ID Card Container */}
             <motion.div
               initial={{ rotate: -1.5 }}
               whileHover={{ rotate: 0, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="relative w-[320px] h-[210px] md:w-[460px] md:h-[290px] bg-[#FFF8EF] border-[2.5px] border-[#1C1917] rounded-[2rem] shadow-2xl p-4 md:p-6 flex items-center justify-between gap-4 md:gap-6 overflow-hidden"
+              className="relative w-[320px] h-[210px] md:w-[460px] md:h-[290px] bg-[#FFF8EF] border-[2.5px] border-[#1C1917] rounded-[2rem] shadow-2xl p-4 md:p-6 flex items-center justify-between gap-4 md:gap-6 overflow-hidden mt-16"
             >
-              {/* Pushpin pinning the top edge */}
-              <div className="absolute top-[-18px] left-1/2 -translate-x-1/2 z-30 text-[#930500] drop-shadow-lg select-none pointer-events-none">
-                <Pin className="w-8 h-8 md:w-10 md:h-10 rotate-[45deg]" />
-              </div>
+              {/* Lanyard slot hole at the top center of the card */}
+              <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-10 h-2.5 rounded-full bg-zinc-950/20 border border-zinc-950/30 z-20 shadow-inner" />
 
               {/* LEFT SIDE: Passport Photo Frame */}
               <div className="w-[100px] md:w-[140px] h-[160px] md:h-[220px] border border-dashed border-[#1C1917]/50 rounded-[1.2rem] p-1.5 flex flex-col justify-between relative bg-white shrink-0">
@@ -98,7 +116,7 @@ const Index = () => {
 
                 {/* Postage Ink Stamp Overlay (Moved to top space) */}
                 <div className="absolute -top-4 -right-4 w-10 h-10 md:w-14 md:h-14 rounded-full border border-dashed border-[#930500]/60 flex items-center justify-center rotate-[-15deg] opacity-70 pointer-events-none select-none bg-transparent">
-                  <span className="text-[6px] md:text-[8px] font-mono font-bold text-[#930500] leading-none text-center">SRM / IN<br/>2026</span>
+                  <span className="text-[6px] md:text-[8px] font-mono font-bold text-[#930500] leading-none text-center">SRM / IN<br/>2005</span>
                 </div>
               </div>
 
@@ -126,8 +144,7 @@ const Index = () => {
                 </div>
 
                 {/* Bottom Stats */}
-                <div className="flex justify-between items-center text-[6px] md:text-[8px] font-mono text-zinc-400">
-                  <span>SINCE 2022</span>
+                <div className="flex justify-end items-center text-[6px] md:text-[8px] font-mono text-zinc-400">
                   <span>CHENNAI</span>
                 </div>
               </div>
