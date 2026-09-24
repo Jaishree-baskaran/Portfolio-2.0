@@ -11,6 +11,7 @@ interface ExperienceItem {
   details: string; // Plain text paragraph, no bullets
   subRoles?: { role: string; time: string; details: string }[]; // For Association of CSE
   categories?: { name: string; items: string[] }[]; // For detailed tools, languages, technologies lists
+  projects?: { name: string; desc: string }[]; // For compact project entries
 }
 
 const workExperience: ExperienceItem[] = [
@@ -19,20 +20,38 @@ const workExperience: ExperienceItem[] = [
     role: "Software Developer (Technical Lead)",
     time: "Jan 2026 - Present",
     type: "WORK",
-    tags: ["Geospatial Viz", "Mapbox", "Leaflet", "AWS", "Predictive Analytics"],
-    details: "Architected and built critical geospatial visualization components for a government-backed Smart City platform, including side-by-side comparison views for multi-month spatial data (master-slave layer sync) and AI-powered change detection between time periods. Owned end-to-end development of scalable map-layer infrastructure using Mapbox and Leaflet, integrating QGIS/ArcGIS-sourced spatial data into AWS-backed real-time visualization workflows. Built CANIT Pulse (analytics platform with Meta/YouTube API integration, RBAC, automated reporting) and developed predictive analytics/anomaly detection models for Smart City urban intelligence.",
+    tags: [],
+    details: "Worked across full-stack development, AI/ML, geospatial systems, analytics, and automation, contributing to multiple production and internal systems across CANIT and its client projects.",
+    projects: [
+      {
+        name: "AMARAVATI 3D GIS & CONSTRUCTION INTELLIGENCE",
+        desc: "Built a CesiumJS-based 3D visualization platform for comparing multi-month construction models, integrating AWS-hosted 3D data, spatial data pipelines, and AI-assisted construction change detection."
+      },
+      {
+        name: "CANIT PULSE",
+        desc: "Built an analytics platform for social and marketing intelligence with Meta/YouTube API integrations, automated reporting, RBAC, Supabase, and AI-powered insights."
+      },
+      {
+        name: "VS COMMON DASHBOARD",
+        desc: "Developed a centralized dashboard for visualizing and managing operational data across VS systems, with interactive analytics, map-based data visualization, and API-driven workflows."
+      },
+      {
+        name: "VS HOSPITAL APPOINTMENT SYSTEM",
+        desc: "Developed and refined a hospital appointment booking system with doctor availability, date and slot management, API integrations, Supabase-backed workflows, and audit tracking."
+      }
+    ],
     categories: [
       {
         name: "TECHNOLOGIES",
-        items: ["React", "Next.js", "FastAPI", "Node.js", "Leaflet", "Mapbox GL JS", "AWS", "Supabase"]
+        items: ["React", "Next.js", "FastAPI", "Node.js", "CesiumJS", "Leaflet", "Mapbox GL JS", "AWS", "Supabase", "PyTorch"]
       },
       {
         name: "LANGUAGES",
-        items: ["TypeScript", "JavaScript", "Python", "SQL", "HTML5", "CSS3"]
+        items: ["TypeScript", "JavaScript", "Python", "SQL", "HTML", "CSS"]
       },
       {
         name: "TOOLS",
-        items: ["VS Code", "GitHub", "Postman", "QGIS", "ArcGIS", "Mapbox Studio", "Figma", "Docker"]
+        items: ["VS Code", "GitHub", "Postman", "QGIS", "ArcGIS", "Mapbox Studio", "Figma", "Docker", "n8n"]
       }
     ]
   },
@@ -224,6 +243,25 @@ const Experience = () => {
                     <p className={`mt-4 text-sm leading-relaxed font-sans ${theme.desc}`}>
                       {exp.details}
                     </p>
+
+                    {/* Projects Section (compact text blocks) */}
+                    {exp.projects && exp.projects.length > 0 && (
+                      <div className="mt-5 space-y-3 border-t border-[#930500]/15 pt-4">
+                        <span className={`font-archivo font-black text-[9px] uppercase tracking-wider ${theme.role === 'text-red-200' ? 'text-red-300' : 'text-zinc-500'}`}>
+                          PROJECTS
+                        </span>
+                        {exp.projects.map((proj, pIdx) => (
+                          <div key={pIdx} className="flex flex-col gap-0.5">
+                            <span className={`font-archivo font-black text-[11px] uppercase tracking-wider leading-tight ${theme.badge}`}>
+                              {proj.name}
+                            </span>
+                            <p className={`text-xs leading-relaxed font-sans ${theme.desc}`}>
+                              {proj.desc}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
 
                   {/* Bottom Card Info (Tech tags / Categories) */}
