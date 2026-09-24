@@ -29,11 +29,11 @@ const workExperience: ExperienceItem[] = [
       },
       {
         name: "CANIT PULSE",
-        desc: "Built an analytics platform for social and marketing intelligence with Meta/YouTube API integrations, automated reporting, RBAC, Supabase, and AI-powered insights."
+        desc: "Built an analytics platform for social and marketing intelligence with Meta and YouTube API integrations, automated reporting, RBAC, Supabase, and AI-powered insights."
       },
       {
-        name: "VS COMMON DASHBOARD",
-        desc: "Developed a centralized dashboard for visualizing and managing operational data across VS systems, with interactive analytics, map-based data visualization, and API-driven workflows."
+        name: "VS DASHBOARD",
+        desc: "Built a centralized analytics dashboard for VS Hospitals, combining advertising data, campaign diagnostics, healthcare-focused performance metrics, and automated executive reporting into a single visual workflow."
       },
       {
         name: "VS HOSPITAL APPOINTMENT SYSTEM",
