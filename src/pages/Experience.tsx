@@ -54,7 +54,10 @@ const workExperience: ExperienceItem[] = [
         items: ["VS Code", "GitHub", "Postman", "QGIS", "ArcGIS", "Mapbox Studio", "Figma", "Docker", "n8n"]
       }
     ]
-  },
+  }
+];
+
+const internshipExperience: ExperienceItem[] = [
   {
     company: "SIMS Hospital",
     role: "Intern - Web App Developer",
@@ -62,10 +65,7 @@ const workExperience: ExperienceItem[] = [
     type: "WORK",
     tags: ["React", "TypeScript", "Android TV", "Performance"],
     details: "Engineered a full-stack media management system for SRM Groups using React, TypeScript, and Android TV. Worked with operational data and system metrics to improve uptime and performance across 500+ connected devices."
-  }
-];
-
-const internshipExperience: ExperienceItem[] = [
+  },
   {
     company: "Revature",
     role: "Project Intern - AI/ML Developer",
@@ -312,7 +312,7 @@ const Experience = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
-            {internshipExperience.map((exp, idx) => renderExperienceCard(exp, getWorkCardStyles(idx + 2), idx))}
+            {internshipExperience.map((exp, idx) => renderExperienceCard(exp, getWorkCardStyles(idx + 1), idx))}
           </div>
         </div>
 
