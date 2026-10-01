@@ -127,7 +127,7 @@ const getWorkCardStyles = (idx: number) => {
   const styles = [
     // 0: White
     {
-      bg: "bg-[#FFF8EF] text-[#1C1917]",
+      bg: "bg-[#FFF8EF] text-[#1C1917] border border-[#E5DFD3]",
       tagBg: "bg-[#FFF8EF] border-[#E5DFD3] text-zinc-600",
       badge: "text-[#930500]",
       role: "text-zinc-500",
@@ -198,84 +198,159 @@ const getLeadershipCardStyles = (idx: number) => {
   return styles[idx % styles.length];
 };
 
-const renderExperienceCard = (exp: ExperienceItem, theme: ReturnType<typeof getWorkCardStyles>, idx: number) => (
-  <div
-    key={idx}
-    className={`group relative p-8 flex flex-col justify-between gap-6 transition-all duration-300 hover:-translate-y-2 select-none rounded-[2rem] shadow-sm ${theme.bg}`}
-  >
-    {/* Top Card Info */}
-    <div className="flex flex-col gap-2">
-      <span className={`font-archivo font-black text-[10px] tracking-widest uppercase ${theme.badge}`}>
-        {exp.type} • {exp.time}
-      </span>
-      
-      <h3 className="text-2xl font-archivo font-black uppercase tracking-tight">
-        {exp.company}
-      </h3>
-      
-      <h4 className={`font-bold uppercase tracking-wider text-xs font-archivo ${theme.role}`}>
-        {exp.role}
-      </h4>
-
-      <p className={`mt-4 text-sm leading-relaxed font-sans ${theme.desc}`}>
-        {exp.details}
-      </p>
-
-      {/* Projects Section (compact text blocks) */}
-      {exp.projects && exp.projects.length > 0 && (
-        <div className="mt-5 space-y-3 border-t border-[#930500]/15 pt-4">
-          <span className={`font-archivo font-black text-[9px] uppercase tracking-wider ${theme.role === 'text-red-200' ? 'text-red-300' : 'text-zinc-500'}`}>
-            PROJECTS
+const renderExperienceCard = (exp: ExperienceItem, theme: ReturnType<typeof getWorkCardStyles>, idx: number) => {
+  // If card has both projects and categories (CANIT card), render the wide, 2-column balanced layout
+  if (exp.projects && exp.categories) {
+    return (
+      <div
+        key={idx}
+        className={`group relative p-8 md:p-10 flex flex-col gap-8 transition-all duration-300 hover:-translate-y-1 select-none rounded-[2rem] shadow-sm ${theme.bg}`}
+      >
+        {/* Top Header: Company, Role, Date, Summary */}
+        <div className="flex flex-col gap-2">
+          <span className={`font-archivo font-black text-[10px] tracking-widest uppercase ${theme.badge}`}>
+            {exp.type} • {exp.time}
           </span>
-          {exp.projects.map((proj, pIdx) => (
-            <div key={pIdx} className="flex flex-col gap-0.5">
-              <span className={`font-archivo font-black text-[11px] uppercase tracking-wider leading-tight ${theme.badge}`}>
-                {proj.name}
-              </span>
-              <p className={`text-xs leading-relaxed font-sans ${theme.desc}`}>
-                {proj.desc}
-              </p>
+          
+          <h3 className="text-2xl md:text-3xl font-archivo font-black uppercase tracking-tight">
+            {exp.company}
+          </h3>
+          
+          <h4 className={`font-bold uppercase tracking-wider text-xs font-archivo ${theme.role}`}>
+            {exp.role}
+          </h4>
+
+          <p className={`mt-3 text-sm leading-relaxed font-sans max-w-3xl ${theme.desc}`}>
+            {exp.details}
+          </p>
+        </div>
+
+        {/* 2-Column Split: Projects on Left, Categories/Tech on Right */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 border-t border-[#930500]/15 pt-6">
+          {/* Column 1: Projects */}
+          <div className="space-y-4">
+            <span className={`font-archivo font-black text-[10px] uppercase tracking-wider ${theme.role === 'text-red-200' ? 'text-red-300' : 'text-zinc-500'}`}>
+              PROJECTS
+            </span>
+            <div className="space-y-4">
+              {exp.projects.map((proj, pIdx) => (
+                <div key={pIdx} className="flex flex-col gap-1">
+                  <span className={`font-archivo font-black text-[11px] uppercase tracking-wider leading-tight ${theme.badge}`}>
+                    {proj.name}
+                  </span>
+                  <p className={`text-xs leading-relaxed font-sans ${theme.desc}`}>
+                    {proj.desc}
+                  </p>
+                </div>
+              ))}
             </div>
+          </div>
+
+          {/* Column 2: Categories (Technologies, Languages, Tools) */}
+          <div className="space-y-6">
+            {exp.categories.map((cat, cIdx) => (
+              <div key={cIdx} className="flex flex-col gap-2">
+                <span className={`font-archivo font-black text-[10px] uppercase tracking-wider ${theme.role === 'text-red-200' ? 'text-red-300' : 'text-zinc-500'}`}>
+                  {cat.name}
+                </span>
+                <div className="flex flex-wrap gap-2">
+                  {cat.items.map((item, itemIdx) => (
+                    <span 
+                      key={itemIdx} 
+                      className={`text-[9px] font-archivo font-bold uppercase tracking-wider px-2.5 py-1 rounded border ${theme.tagBg}`}
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Standard 1-column card for other experiences (SIMS, Revature, Rotork)
+  return (
+    <div
+      key={idx}
+      className={`group relative p-8 flex flex-col justify-between gap-6 transition-all duration-300 hover:-translate-y-2 select-none rounded-[2rem] shadow-sm ${theme.bg}`}
+    >
+      {/* Top Card Info */}
+      <div className="flex flex-col gap-2">
+        <span className={`font-archivo font-black text-[10px] tracking-widest uppercase ${theme.badge}`}>
+          {exp.type} • {exp.time}
+        </span>
+        
+        <h3 className="text-2xl font-archivo font-black uppercase tracking-tight">
+          {exp.company}
+        </h3>
+        
+        <h4 className={`font-bold uppercase tracking-wider text-xs font-archivo ${theme.role}`}>
+          {exp.role}
+        </h4>
+
+        <p className={`mt-4 text-sm leading-relaxed font-sans ${theme.desc}`}>
+          {exp.details}
+        </p>
+
+        {/* Projects Section (compact text blocks) */}
+        {exp.projects && exp.projects.length > 0 && (
+          <div className="mt-5 space-y-3 border-t border-[#930500]/15 pt-4">
+            <span className={`font-archivo font-black text-[9px] uppercase tracking-wider ${theme.role === 'text-red-200' ? 'text-red-300' : 'text-zinc-500'}`}>
+              PROJECTS
+            </span>
+            {exp.projects.map((proj, pIdx) => (
+              <div key={pIdx} className="flex flex-col gap-0.5">
+                <span className={`font-archivo font-black text-[11px] uppercase tracking-wider leading-tight ${theme.badge}`}>
+                  {proj.name}
+                </span>
+                <p className={`text-xs leading-relaxed font-sans ${theme.desc}`}>
+                  {proj.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Bottom Card Info (Tech tags / Categories) */}
+      {exp.categories ? (
+        <div className="mt-4 space-y-4 border-t border-[#930500]/15 pt-4">
+          {exp.categories.map((cat, cIdx) => (
+            <div key={cIdx} className="flex flex-col gap-1.5">
+              <span className={`font-archivo font-black text-[9px] uppercase tracking-wider ${theme.role === 'text-red-200' ? 'text-red-300' : 'text-zinc-500'}`}>
+                {cat.name}
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {cat.items.map((item, itemIdx) => (
+                  <span 
+                    key={itemIdx} 
+                    className={`text-[9px] font-archivo font-bold uppercase tracking-wider px-2 py-0.5 rounded border ${theme.tagBg}`}
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="flex flex-wrap gap-2.5">
+          {exp.tags.map((tag, tagIdx) => (
+            <span 
+              key={tagIdx} 
+              className={`text-[10px] font-archivo font-bold uppercase tracking-wider px-2.5 py-1 rounded border ${theme.tagBg}`}
+            >
+              {tag}
+            </span>
           ))}
         </div>
       )}
     </div>
-
-    {/* Bottom Card Info (Tech tags / Categories) */}
-    {exp.categories ? (
-      <div className="mt-4 space-y-4 border-t border-[#930500]/15 pt-4">
-        {exp.categories.map((cat, cIdx) => (
-          <div key={cIdx} className="flex flex-col gap-1.5">
-            <span className={`font-archivo font-black text-[9px] uppercase tracking-wider ${theme.role === 'text-red-200' ? 'text-red-300' : 'text-zinc-500'}`}>
-              {cat.name}
-            </span>
-            <div className="flex flex-wrap gap-2">
-              {cat.items.map((item, itemIdx) => (
-                <span 
-                  key={itemIdx} 
-                  className={`text-[9px] font-archivo font-bold uppercase tracking-wider px-2 py-0.5 rounded border ${theme.tagBg}`}
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    ) : (
-      <div className="flex flex-wrap gap-2.5">
-        {exp.tags.map((tag, tagIdx) => (
-          <span 
-            key={tagIdx} 
-            className={`text-[10px] font-archivo font-bold uppercase tracking-wider px-2.5 py-1 rounded border ${theme.tagBg}`}
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-    )}
-  </div>
-);
+  );
+};
 
 const Experience = () => {
   return (
@@ -300,7 +375,7 @@ const Experience = () => {
             Work
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+          <div className="w-full">
             {workExperience.map((exp, idx) => renderExperienceCard(exp, getWorkCardStyles(idx), idx))}
           </div>
         </div>
