@@ -21,7 +21,7 @@ const workExperience: ExperienceItem[] = [
     time: "Jan 2026 - Present",
     type: "WORK",
     tags: [],
-    details: "Worked across full-stack development, AI/ML, geospatial systems, analytics, and automation, contributing to multiple production and internal systems across CANIT and its client projects.",
+    details: "Worked across full-stack development, AI/ML, geospatial systems, analytics, and automation, while leading the technical direction of multiple products. Mentored and trained a junior developer, drove key implementation decisions, and helped take ideas from early concepts to production-ready systems.",
     projects: [
       {
         name: "AMARAVATI 3D GIS & CONSTRUCTION INTELLIGENCE",
