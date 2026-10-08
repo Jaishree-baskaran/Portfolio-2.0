@@ -41,7 +41,7 @@ const About = () => {
            >
              
              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#1C1917] font-archivo">
-               ABOUT ME
+               ABOUT
              </h1>
 
              <div className="w-20 h-0.5 bg-[#930500] rounded-full" />

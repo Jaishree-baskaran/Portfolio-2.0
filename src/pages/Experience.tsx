@@ -365,14 +365,14 @@ const Experience = () => {
         {/* Title */}
         <div className="bg-[#FFF8EF] border border-[#E5DFD3] px-8 py-5 flex items-center justify-center relative overflow-hidden rounded-[2rem] shadow-sm backdrop-blur-md">
           <h1 className="text-xl md:text-2xl font-black tracking-[0.2em] relative z-10 text-center uppercase text-[#1C1917] font-archivo">
-            Professional Journey
+            PROFESSIONAL JOURNEY
           </h1>
         </div>
 
         {/* Work Section */}
         <div className="flex flex-col gap-6">
           <h2 className="text-[#930500] font-archivo font-black text-sm uppercase tracking-widest pl-2">
-            Work
+            WORK
           </h2>
           
           <div className="w-full">
@@ -383,7 +383,7 @@ const Experience = () => {
         {/* Internships Section */}
         <div className="flex flex-col gap-6">
           <h2 className="text-[#930500] font-archivo font-black text-sm uppercase tracking-widest pl-2">
-            Internships
+            INTERNSHIPS
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
@@ -394,7 +394,7 @@ const Experience = () => {
         {/* Leadership Section */}
         <div className="flex flex-col gap-6 mt-6">
           <h2 className="text-[#930500] font-archivo font-black text-sm uppercase tracking-widest pl-2">
-            Leadership & Impact
+            LEADERSHIP & IMPACT
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">

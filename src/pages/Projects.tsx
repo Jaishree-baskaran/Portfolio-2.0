@@ -80,7 +80,7 @@ const Projects = () => {
         {/* Compact Header */}
         <div className="text-center flex flex-col items-center gap-1.5">
           <h1 className="text-xl md:text-2xl font-black tracking-[0.25em] uppercase text-[#1C1917] font-archivo">
-            Projects
+            PROJECTS
           </h1>
           <p className="text-zinc-600 text-xs sm:text-sm font-sans font-light">
             Selected things I've built & experimented with.

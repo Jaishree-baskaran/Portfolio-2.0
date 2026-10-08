@@ -21,7 +21,7 @@ const Contact = () => {
           <div className="absolute inset-0 bg-gradient-to-tr from-white/20 via-transparent to-transparent pointer-events-none" />
 
           <p className="text-xs uppercase tracking-[0.4em] text-[#930500] mb-6 font-black font-archivo">
-            Connect
+            CONTACT
           </p>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight mb-8 leading-none uppercase font-archivo text-[#1C1917]">

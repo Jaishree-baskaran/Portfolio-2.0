@@ -177,7 +177,7 @@ const Impact = () => {
         <section className="w-full">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-[0.2em] text-[#1C1917] font-archivo">
-              Publications
+              PUBLICATIONS
             </h2>
           </div>
 

@@ -5,8 +5,8 @@ import { useState } from "react";
 const navItems = [
   { path: "/about", label: "ABOUT" },
   { path: "/projects", label: "PROJECTS" },
-  { path: "/Impact", label: "IMPACT" },
-  { path: "/experience", label: "EXPERIENCE" },
+  { path: "/publications", label: "PUBLICATIONS" },
+  { path: "/professional-journey", label: "PROFESSIONAL JOURNEY" },
   { path: "/contact", label: "CONTACT" },
 ];
 
@@ -48,7 +48,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8 lg:gap-14">
             {navItems.map((item) => {
-              const isActive = location.pathname === item.path;
+              const isActive = location.pathname === item.path ||
+                (item.path === "/publications" && location.pathname.toLowerCase() === "/impact") ||
+                (item.path === "/professional-journey" && location.pathname.toLowerCase() === "/experience");
 
               return (
                 <Link
@@ -94,7 +96,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             className="fixed inset-0 z-40 backdrop-blur-2xl flex flex-col items-center justify-center gap-8 bg-[#FFF8EF]/95"
           >
             {navItems.map((item) => {
-              const isActive = location.pathname === item.path;
+              const isActive = location.pathname === item.path ||
+                (item.path === "/publications" && location.pathname.toLowerCase() === "/impact") ||
+                (item.path === "/professional-journey" && location.pathname.toLowerCase() === "/experience");
 
               return (
                 <Link
