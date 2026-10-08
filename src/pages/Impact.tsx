@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import y2kBg from "@/assets/chrome-bg-2.png";
 
 // Publications Images
@@ -107,8 +106,13 @@ const technicalCerts: CertificateItem[] = [
     date: "2024"
   },
   {
-    title: "Employment Communication (Gold)",
+    title: "Employment Communication (Gold) (IIT-NPTEL)",
     issuer: "IIT-NPTEL",
+    date: "2023"
+  },
+  {
+    title: "Nasscom (Gold)",
+    issuer: "Nasscom",
     date: "2023"
   }
 ];
@@ -260,20 +264,14 @@ const Impact = () => {
                   {technicalCerts.map((cert, i) => (
                     <div
                       key={i}
-                      className="group bg-[#FFF8EF] border border-[#E5DFD3] p-4 rounded-xl flex flex-col justify-between shadow-sm hover:border-[#930500]/30 hover:shadow-md transition-all duration-200 select-none min-h-[76px]"
+                      className="group bg-[#FFF8EF] border border-[#E5DFD3] p-4 rounded-xl flex flex-col justify-between shadow-sm hover:border-[#930500]/30 transition-all duration-200 select-none min-h-[72px]"
                     >
                       <h4 className="font-archivo font-bold text-xs sm:text-sm text-[#1C1917] truncate leading-tight group-hover:text-[#930500] transition-colors">
                         {cert.title}
                       </h4>
-                      <div className="flex items-center justify-between text-zinc-500 text-[11px] sm:text-xs font-sans mt-2">
-                        <span className="truncate pr-2">
-                          {cert.issuer}{cert.date ? ` · ${cert.date}` : ""}
-                        </span>
-                        <ArrowUpRight 
-                          size={14} 
-                          className="text-zinc-400 group-hover:text-[#930500] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" 
-                        />
-                      </div>
+                      <p className="text-zinc-500 text-[11px] sm:text-xs font-sans mt-2 truncate">
+                        {cert.issuer}{cert.date ? ` · ${cert.date}` : ""}
+                      </p>
                     </div>
                   ))}
                </div>
@@ -286,20 +284,14 @@ const Impact = () => {
                   {spaceScienceCerts.map((cert, i) => (
                     <div
                       key={i}
-                      className="group bg-[#FFF8EF] border border-[#E5DFD3] p-4 rounded-xl flex flex-col justify-between shadow-sm hover:border-[#930500]/30 hover:shadow-md transition-all duration-200 select-none min-h-[76px]"
+                      className="group bg-[#FFF8EF] border border-[#E5DFD3] p-4 rounded-xl flex flex-col justify-between shadow-sm hover:border-[#930500]/30 transition-all duration-200 select-none min-h-[72px]"
                     >
                       <h4 className="font-archivo font-bold text-xs sm:text-sm text-[#1C1917] truncate leading-tight group-hover:text-[#930500] transition-colors">
                         {cert.title}
                       </h4>
-                      <div className="flex items-center justify-between text-zinc-500 text-[11px] sm:text-xs font-sans mt-2">
-                        <span className="truncate pr-2">
-                          {cert.issuer}{cert.date ? ` · ${cert.date}` : ""}
-                        </span>
-                        <ArrowUpRight 
-                          size={14} 
-                          className="text-zinc-400 group-hover:text-[#930500] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" 
-                        />
-                      </div>
+                      <p className="text-zinc-500 text-[11px] sm:text-xs font-sans mt-2 truncate">
+                        {cert.issuer}{cert.date ? ` · ${cert.date}` : ""}
+                      </p>
                     </div>
                   ))}
                </div>
@@ -312,20 +304,14 @@ const Impact = () => {
                   {dataScienceCerts.map((cert, i) => (
                     <div
                       key={i}
-                      className="group bg-[#FFF8EF] border border-[#E5DFD3] p-4 rounded-xl flex flex-col justify-between shadow-sm hover:border-[#930500]/30 hover:shadow-md transition-all duration-200 select-none min-h-[76px]"
+                      className="group bg-[#FFF8EF] border border-[#E5DFD3] p-4 rounded-xl flex flex-col justify-between shadow-sm hover:border-[#930500]/30 transition-all duration-200 select-none min-h-[72px]"
                     >
                       <h4 className="font-archivo font-bold text-xs sm:text-sm text-[#1C1917] truncate leading-tight group-hover:text-[#930500] transition-colors">
                         {cert.title}
                       </h4>
-                      <div className="flex items-center justify-between text-zinc-500 text-[11px] sm:text-xs font-sans mt-2">
-                        <span className="truncate pr-2">
-                          {cert.issuer}{cert.date ? ` · ${cert.date}` : ""}
-                        </span>
-                        <ArrowUpRight 
-                          size={14} 
-                          className="text-zinc-400 group-hover:text-[#930500] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" 
-                        />
-                      </div>
+                      <p className="text-zinc-500 text-[11px] sm:text-xs font-sans mt-2 truncate">
+                        {cert.issuer}{cert.date ? ` · ${cert.date}` : ""}
+                      </p>
                     </div>
                   ))}
                </div>
