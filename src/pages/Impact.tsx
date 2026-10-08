@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import y2kBg from "@/assets/chrome-bg-2.png";
 
 // Publications Images
@@ -62,28 +63,100 @@ const achievements = [
   },
 ];
 
-const technicalCerts = [
-  "Deep Learning A-Z (Udemy)",
-  "Object Oriented Design (Coursera)",
-  "Data Structures in C++ (Scaler)",
-  "Fundamentals of Operating System (Scaler)",
-  "JAVA & OOP (Coursera)",
-  "Cybersecurity Job Simulation (Mastercard)",
-  "Demystifying Network (IIT-NPTEL)",
-  "Employment Communication (Gold) (IIT-NPTEL)"
+interface CertificateItem {
+  title: string;
+  issuer: string;
+  date: string;
+  url?: string;
+}
+
+const technicalCerts: CertificateItem[] = [
+  {
+    title: "Deep Learning A-Z",
+    issuer: "Udemy",
+    date: "2025"
+  },
+  {
+    title: "Object Oriented Design",
+    issuer: "Coursera",
+    date: "2025"
+  },
+  {
+    title: "Data Structures in C++",
+    issuer: "Scaler",
+    date: "2024"
+  },
+  {
+    title: "Fundamentals of Operating System",
+    issuer: "Scaler",
+    date: "2024"
+  },
+  {
+    title: "JAVA & OOP",
+    issuer: "Coursera",
+    date: "2024"
+  },
+  {
+    title: "Cybersecurity Job Simulation",
+    issuer: "Mastercard",
+    date: "2025"
+  },
+  {
+    title: "Demystifying Network",
+    issuer: "IIT-NPTEL",
+    date: "2024"
+  },
+  {
+    title: "Employment Communication (Gold)",
+    issuer: "IIT-NPTEL",
+    date: "2023"
+  }
 ];
 
-const spaceScienceCerts = [
-  "Predicting Stars/Galaxies (Udemy)",
-  "Rocket Propulsion (NoxJet)"
+const spaceScienceCerts: CertificateItem[] = [
+  {
+    title: "Predicting Stars/Galaxies",
+    issuer: "Udemy",
+    date: "2024"
+  },
+  {
+    title: "Rocket Propulsion",
+    issuer: "NoxJet",
+    date: "2023"
+  }
 ];
 
-const dataScienceCerts = [
-  "Introduction to MongoDB",
-  "Quantitative Research Job Simulation",
-  "Introduction to Data Science",
-  "Tools for Data Science",
-  "Data Processing & Visualisation (Gold)"
+const dataScienceCerts: CertificateItem[] = [
+  {
+    title: "Deloitte – Data Analytics",
+    issuer: "Forage",
+    date: "Jan 2026"
+  },
+  {
+    title: "Tools for Data Science",
+    issuer: "Coursera",
+    date: "Mar 2025"
+  },
+  {
+    title: "Introduction to MongoDB",
+    issuer: "MongoDB University",
+    date: "2025"
+  },
+  {
+    title: "Quantitative Research Job Simulation",
+    issuer: "Forage",
+    date: "2025"
+  },
+  {
+    title: "Introduction to Data Science",
+    issuer: "Coursera",
+    date: "2024"
+  },
+  {
+    title: "Data Processing & Visualisation (Gold)",
+    issuer: "IIT-NPTEL",
+    date: "2024"
+  }
 ];
 
 const Impact = () => {
@@ -183,11 +256,25 @@ const Impact = () => {
              {/* Technical */}
              <div>
                <h3 className="text-[#930500] font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-[#E5DFD3] pb-4 text-center md:text-left font-archivo">Technical</h3>
-               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
                   {technicalCerts.map((cert, i) => (
-                     <div key={i} className="bg-[#FFF8EF] border border-[#E5DFD3]/60 p-5 rounded-2xl flex items-center justify-center text-center shadow-sm hover:border-[#930500]/20 hover:bg-zinc-50/50 transition-all duration-300">
-                        <span className="font-sans text-zinc-700 text-xs md:text-sm font-light tracking-wide">{cert}</span>
-                     </div>
+                    <div
+                      key={i}
+                      className="group bg-[#FFF8EF] border border-[#E5DFD3] p-4 rounded-xl flex flex-col justify-between shadow-sm hover:border-[#930500]/30 hover:shadow-md transition-all duration-200 select-none min-h-[76px]"
+                    >
+                      <h4 className="font-archivo font-bold text-xs sm:text-sm text-[#1C1917] truncate leading-tight group-hover:text-[#930500] transition-colors">
+                        {cert.title}
+                      </h4>
+                      <div className="flex items-center justify-between text-zinc-500 text-[11px] sm:text-xs font-sans mt-2">
+                        <span className="truncate pr-2">
+                          {cert.issuer}{cert.date ? ` · ${cert.date}` : ""}
+                        </span>
+                        <ArrowUpRight 
+                          size={14} 
+                          className="text-zinc-400 group-hover:text-[#930500] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" 
+                        />
+                      </div>
+                    </div>
                   ))}
                </div>
              </div>
@@ -195,11 +282,25 @@ const Impact = () => {
              {/* Space Science */}
              <div>
                <h3 className="text-[#930500] font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-[#E5DFD3] pb-4 text-center md:text-left font-archivo">Space Science</h3>
-               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
                   {spaceScienceCerts.map((cert, i) => (
-                     <div key={i} className="bg-[#FFF8EF] border border-[#E5DFD3]/60 p-5 rounded-2xl flex items-center justify-center text-center shadow-sm hover:border-[#930500]/20 hover:bg-zinc-50/50 transition-all duration-300">
-                        <span className="font-sans text-zinc-700 text-xs md:text-sm font-light tracking-wide">{cert}</span>
-                     </div>
+                    <div
+                      key={i}
+                      className="group bg-[#FFF8EF] border border-[#E5DFD3] p-4 rounded-xl flex flex-col justify-between shadow-sm hover:border-[#930500]/30 hover:shadow-md transition-all duration-200 select-none min-h-[76px]"
+                    >
+                      <h4 className="font-archivo font-bold text-xs sm:text-sm text-[#1C1917] truncate leading-tight group-hover:text-[#930500] transition-colors">
+                        {cert.title}
+                      </h4>
+                      <div className="flex items-center justify-between text-zinc-500 text-[11px] sm:text-xs font-sans mt-2">
+                        <span className="truncate pr-2">
+                          {cert.issuer}{cert.date ? ` · ${cert.date}` : ""}
+                        </span>
+                        <ArrowUpRight 
+                          size={14} 
+                          className="text-zinc-400 group-hover:text-[#930500] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" 
+                        />
+                      </div>
+                    </div>
                   ))}
                </div>
              </div>
@@ -207,11 +308,25 @@ const Impact = () => {
              {/* Data Science */}
              <div>
                <h3 className="text-[#930500] font-bold tracking-[0.5em] text-xs uppercase mb-6 border-b border-[#E5DFD3] pb-4 text-center md:text-left font-archivo">Data Science</h3>
-               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
                   {dataScienceCerts.map((cert, i) => (
-                     <div key={i} className="bg-[#FFF8EF] border border-[#E5DFD3]/60 p-5 rounded-2xl flex items-center justify-center text-center shadow-sm hover:border-[#930500]/20 hover:bg-zinc-50/50 transition-all duration-300">
-                        <span className="font-sans text-zinc-700 text-xs md:text-sm font-light tracking-wide">{cert}</span>
-                     </div>
+                    <div
+                      key={i}
+                      className="group bg-[#FFF8EF] border border-[#E5DFD3] p-4 rounded-xl flex flex-col justify-between shadow-sm hover:border-[#930500]/30 hover:shadow-md transition-all duration-200 select-none min-h-[76px]"
+                    >
+                      <h4 className="font-archivo font-bold text-xs sm:text-sm text-[#1C1917] truncate leading-tight group-hover:text-[#930500] transition-colors">
+                        {cert.title}
+                      </h4>
+                      <div className="flex items-center justify-between text-zinc-500 text-[11px] sm:text-xs font-sans mt-2">
+                        <span className="truncate pr-2">
+                          {cert.issuer}{cert.date ? ` · ${cert.date}` : ""}
+                        </span>
+                        <ArrowUpRight 
+                          size={14} 
+                          className="text-zinc-400 group-hover:text-[#930500] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" 
+                        />
+                      </div>
+                    </div>
                   ))}
                </div>
              </div>
