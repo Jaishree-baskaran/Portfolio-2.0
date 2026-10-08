@@ -165,20 +165,20 @@ const dataScienceCerts: CertificateItem[] = [
 
 const Impact = () => {
   return (
-    <div className="relative min-h-screen w-full flex flex-col items-center pt-40 pb-20 px-4 md:px-12 overflow-x-hidden bg-transparent">
+    <div className="relative min-h-screen w-full flex flex-col items-center pt-32 md:pt-36 pb-16 px-4 md:px-12 overflow-x-hidden bg-transparent">
       
       {/* Background shading for the Impact page */}
       <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] rounded-full bg-[#EFEAE2]/20 blur-[100px] pointer-events-none" />
       <div className="absolute bottom-[20%] left-[-10%] w-[450px] h-[450px] rounded-full bg-[#FFF8EF] blur-[120px] pointer-events-none" />
 
-      <div className="relative z-10 w-full max-w-[1200px] flex flex-col gap-24 mt-10 font-sans">
+      <div className="relative z-10 w-full max-w-[1200px] flex flex-col gap-16 font-sans">
 
         {/* ================= PUBLICATIONS ================= */}
         <section className="w-full">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-[0.2em] text-[#1C1917] font-archivo">
+          <div className="text-center mb-8">
+            <h1 className="text-xl md:text-2xl font-black uppercase tracking-[0.25em] text-[#1C1917] font-archivo">
               PUBLICATIONS
-            </h2>
+            </h1>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -214,9 +214,9 @@ const Impact = () => {
 
         {/* ================= ACHIEVEMENTS ================= */}
         <section className="w-full">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-[0.2em] text-[#1C1917] font-archivo">
-              Achievements
+          <div className="text-center mb-8">
+            <h2 className="text-xl md:text-2xl font-black uppercase tracking-[0.2em] text-[#1C1917] font-archivo">
+              ACHIEVEMENTS
             </h2>
           </div>
 
@@ -250,9 +250,9 @@ const Impact = () => {
 
         {/* ================= CERTIFICATIONS ================= */}
         <section className="w-full mt-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-[0.2em] text-[#1C1917] font-archivo">
-              Certifications
+          <div className="text-center mb-8">
+            <h2 className="text-xl md:text-2xl font-black uppercase tracking-[0.2em] text-[#1C1917] font-archivo">
+              CERTIFICATIONS
             </h2>
           </div>
 

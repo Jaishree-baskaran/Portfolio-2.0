@@ -3,7 +3,7 @@ import { Github, Linkedin } from "lucide-react";
 
 const Contact = () => {
   return (
-    <div className="relative min-h-screen w-full flex flex-col items-center justify-center pt-40 pb-20 px-4 md:px-12 overflow-x-hidden bg-transparent">
+    <div className="relative min-h-screen w-full flex flex-col items-center justify-center pt-32 md:pt-36 pb-16 px-4 md:px-12 overflow-x-hidden bg-transparent">
       
       {/* Background soft parchment shading */}
       <div className="absolute top-[20%] left-[-10%] w-[350px] h-[350px] rounded-full bg-[#EFEAE2]/30 blur-[100px] pointer-events-none" />

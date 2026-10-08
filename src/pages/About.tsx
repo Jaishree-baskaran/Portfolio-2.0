@@ -19,7 +19,7 @@ const educations = [
 
 const About = () => {
   return (
-    <div className="relative min-h-screen w-full flex flex-col items-center pt-40 pb-20 px-4 md:px-12 overflow-x-hidden bg-transparent">
+    <div className="relative min-h-screen w-full flex flex-col items-center pt-32 md:pt-36 pb-16 px-4 md:px-12 overflow-x-hidden bg-transparent">
       
       {/* Background shading for the About page */}
       <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] rounded-full bg-[#EFEAE2]/20 blur-[100px] pointer-events-none" />
