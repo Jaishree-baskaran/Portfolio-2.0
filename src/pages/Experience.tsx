@@ -29,12 +29,8 @@ const workExperience: ExperienceItem[] = [
       },
       {
         name: "CANIT PULSE",
-        subtitle: "MULTI-PLATFORM BRAND INTELLIGENCE SUITE",
-        desc: (
-          <>
-            Architected and developed a multi-platform <span className="text-zinc-100 font-medium">brand intelligence SaaS</span> that unifies social media, advertising, and marketing analytics into a centralized dashboard. Integrated Meta Graph API, Google Ads API, and YouTube Data API to consolidate campaign performance metrics, automate <span className="text-zinc-100 font-medium">historical data snapshots</span>, and power AI-driven brand insights and executive reporting. Implemented <span className="text-zinc-100 font-medium">multi-tenant access control</span>, client-scoped dashboards, and automated report generation using React, FastAPI, and Supabase.
-          </>
-        )
+        subtitle: "MULTI-PLATFORM BRAND INTELLIGENCE SAAS",
+        desc: "Conceived, architected, and engineered CANIT PULSE as a reusable, multi-tenant brand intelligence SaaS that transforms fragmented marketing data into a unified, actionable view of business performance. Built end-to-end integrations with Meta Graph API, Google Ads API, and YouTube Data API, alongside historical data pipelines, AI-driven brand insights, automated executive reporting, and secure client-specific workspaces. Designed the platform around real agency workflows, with modular architecture intended to support multiple companies within one cohesive product ecosystem."
       },
       {
         name: "CANIT SKOPE",
