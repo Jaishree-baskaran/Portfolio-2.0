@@ -11,7 +11,7 @@ interface ExperienceItem {
   details: string; // Plain text paragraph, no bullets
   subRoles?: { role: string; time: string; details: string }[]; // For Association of CSE
   categories?: { name: string; items: string[] }[]; // For detailed tools, languages, technologies lists
-  projects?: { name: string; desc: string }[]; // For compact project entries
+  projects?: { name: string; subtitle?: string; desc: React.ReactNode }[]; // For compact project entries
 }
 
 const workExperience: ExperienceItem[] = [
@@ -29,7 +29,12 @@ const workExperience: ExperienceItem[] = [
       },
       {
         name: "CANIT PULSE",
-        desc: "Built an analytics platform for social and marketing intelligence with Meta and YouTube API integrations, automated reporting, RBAC, Supabase, and AI-powered insights."
+        subtitle: "MULTI-PLATFORM BRAND INTELLIGENCE SUITE",
+        desc: (
+          <>
+            Architected and developed a multi-platform <span className="text-zinc-100 font-medium">brand intelligence SaaS</span> that unifies social media, advertising, and marketing analytics into a centralized dashboard. Integrated Meta Graph API, Google Ads API, and YouTube Data API to consolidate campaign performance metrics, automate <span className="text-zinc-100 font-medium">historical data snapshots</span>, and power AI-driven brand insights and executive reporting. Implemented <span className="text-zinc-100 font-medium">multi-tenant access control</span>, client-scoped dashboards, and automated report generation using React, FastAPI, and Supabase.
+          </>
+        )
       },
       {
         name: "CANIT SKOPE",
@@ -238,6 +243,11 @@ const renderExperienceCard = (exp: ExperienceItem, theme: ReturnType<typeof getW
                   <span className={`font-archivo font-black text-[11px] uppercase tracking-wider leading-tight ${theme.badge}`}>
                     {proj.name}
                   </span>
+                  {proj.subtitle && (
+                    <span className="text-[9px] font-archivo font-bold uppercase tracking-wider text-zinc-400 -mt-0.5">
+                      {proj.subtitle}
+                    </span>
+                  )}
                   <p className={`text-xs leading-relaxed font-sans ${theme.desc}`}>
                     {proj.desc}
                   </p>
@@ -306,6 +316,11 @@ const renderExperienceCard = (exp: ExperienceItem, theme: ReturnType<typeof getW
                 <span className={`font-archivo font-black text-[11px] uppercase tracking-wider leading-tight ${theme.badge}`}>
                   {proj.name}
                 </span>
+                {proj.subtitle && (
+                  <span className="text-[9px] font-archivo font-bold uppercase tracking-wider text-zinc-400 -mt-0.5">
+                    {proj.subtitle}
+                  </span>
+                )}
                 <p className={`text-xs leading-relaxed font-sans ${theme.desc}`}>
                   {proj.desc}
                 </p>
