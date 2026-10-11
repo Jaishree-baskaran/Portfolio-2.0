@@ -224,19 +224,16 @@ const Impact = () => {
       <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] rounded-full bg-[#EFEAE2]/20 blur-[100px] pointer-events-none" />
       <div className="absolute bottom-[20%] left-[-10%] w-[450px] h-[450px] rounded-full bg-[#FFF8EF] blur-[120px] pointer-events-none" />
 
-      <div className="relative z-10 w-full max-w-[1140px] flex flex-col gap-14 font-sans">
+      <div className="relative z-10 w-full max-w-[1140px] flex flex-col gap-10 md:gap-12 font-sans">
 
         {/* Compact Editorial Research Header */}
-        <div className="text-center flex flex-col items-center gap-2 max-w-2xl mx-auto">
+        <div className="text-center flex flex-col items-center gap-1.5 max-w-2xl mx-auto">
           <span className="text-[#930500] font-archivo font-black text-xs uppercase tracking-[0.3em]">
             RESEARCH & SCHOLARLY WORK
           </span>
           <h1 className="text-2xl md:text-4xl font-archivo font-black uppercase tracking-tight text-[#1C1917]">
             IDEAS, INVESTIGATED.
           </h1>
-          <p className="text-zinc-600 text-xs sm:text-sm font-sans font-light leading-relaxed">
-            Research at the intersection of intelligent systems, machine learning, and real-world problems.
-          </p>
         </div>
 
         {/* ================= RESEARCH ENTRIES (BALANCED 2-COLUMN GRID) ================= */}
