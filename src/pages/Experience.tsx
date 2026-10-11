@@ -32,8 +32,8 @@ const workExperience: ExperienceItem[] = [
         desc: "Built an analytics platform for social and marketing intelligence with Meta and YouTube API integrations, automated reporting, RBAC, Supabase, and AI-powered insights."
       },
       {
-        name: "VS DASHBOARD",
-        desc: "Built a centralized analytics dashboard for VS Hospitals, combining advertising data, campaign diagnostics, healthcare-focused performance metrics, and automated executive reporting into a single visual workflow."
+        name: "CANIT SKOPE",
+        desc: "Built a high-performance advertising intelligence platform that processes Google Ads and Meta Ads datasets, normalizes complex campaign data, and delivers ROAS analytics, campaign diagnostics, and automated executive PDF reports."
       },
       {
         name: "VS HOSPITAL APPOINTMENT SYSTEM",
